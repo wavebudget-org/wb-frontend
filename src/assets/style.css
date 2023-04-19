@@ -1,0 +1,350 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #EBF6F6;
+    overflow-x: hidden;
+}
+.top-header{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.header-navigation {
+display: flex;
+gap: 20px ;
+font-size: 1.5rem;
+}
+.links{
+    text-decoration: none;
+    color: #12617A;
+    
+}
+
+.logo{
+    width: 100px;
+    display: flex;
+    position: relative;
+    /* padding: 8px; */
+ 
+}
+.logo img {
+    width: 100%;
+    color: white;
+        
+}
+.logo-span{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: -40px;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: Roboto;
+    color: #12617A;
+
+}
+
+.drop-down{
+    display: none;
+  
+}
+.join-btn{
+    padding: 15px 35px;
+    background: #12617A;
+    color: #fff;
+    border-radius: 16px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+.responsive-li {
+    background: #263959;
+    max-width: 100%;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    
+}
+.nav-list{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+.body-section{
+    display: flex;
+    justify-content: space-around;
+    /* grid-template-columns: 1fr 1fr ; */
+    padding: 30px;
+    margin-top: 30px;
+}
+.body-image{
+    width: 500px;
+}
+.body-image img{
+    width: 100%;
+}
+.body-h1{
+    font-size: 3rem;
+    color: #008B8B;
+    font-weight: 600px;
+    line-height: 60px;
+    font-family: Roboto;
+}
+.body-btn{
+    display: flex;
+    margin: 40px;
+    gap: 10px;
+    margin-top: -50px;
+}
+.btn-body1{
+    padding: 20px 40px;
+    display: flex;
+    background:  #008B8B;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    color: #F8F8F8;
+
+}
+.btn-body2{
+    padding: 18px 35px;
+    display: flex;
+    background: #ffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    cursor: pointer;
+
+}
+.message-logo{
+    position: relative;
+    padding: 15px;
+}
+.message-logo img{
+    position: absolute;
+    width: 20px;
+    top: 15px;
+    left: -40px;
+    padding: 5px;
+}
+.shop-now{
+  display: flex; 
+  justify-content: space-between; 
+
+}
+.grid-shop-now{
+    background: #008B8B;
+    width: 500px;
+    padding: 20px;
+    color: #ffff;
+
+}
+.grid-invest {
+    background: #12617A;
+    padding: 20px;
+    color: #fff;
+    gap: 20px;
+}
+.grid-shop-h1{
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+}
+.grid-shop-p{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 36;
+    line-height: 42px;
+}
+.grid-invest-h1{
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 36;
+    line-height: 42px;
+}
+.grid-invest-p{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 36;
+    line-height: 42px;
+}
+.grid-show-btn,
+.grid-invest-btn
+{
+    display: flex;
+    justify-content: center;
+}
+.grid-btn{
+    box-shadow: 0px 4px 4px #12617A;
+    background: #ffff;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-weight: 700;
+     color: #008B8B;
+
+}
+.demo-h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 60px;
+    font-family: Roboto;
+    font-weight: 600;
+    color: #008B8B;
+}
+.demo-p {
+ font-family: Roboto;
+font-size: 36px;
+font-weight: 700;
+line-height: 42px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.bnpl-calculator{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.bnpl-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.btn-generate {
+    padding: 10px 40px;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+}
+.calculator-form {
+    background: #fff;
+    width: 500px;
+    height: 350px;
+    text-align: center;
+    padding: 20px;
+}
+input[type=text] {
+    width: 80%;
+    height: 30px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.phone-image{
+    width: 500px;
+    
+}
+.phone-image img {
+    width: 100%;
+    height: 600px;
+}
+@media (min-width: 240px) and (max-width:720px) {
+    .top-header{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    .header-navigation{
+        display: none;
+    }
+    .join-btn{
+        display: none;
+    }
+    .drop-down{
+        display: block;
+      
+    }
+    .responsive-li {
+        background: #263959;
+        max-width: 100%;
+        color: #fff;
+        height: 100px;
+        text-align: center;
+        padding: 20px;
+        margin-top: -30px;
+        border-radius: 10px;
+        display: none;
+        
+    }
+    li{
+        list-style: none;
+        padding: 10px; 
+    
+    }
+    .responsive-slide {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        transition: all 0.6s ease;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .body-image{
+        display: none;
+    }
+    .body-section{
+        display: flex;
+        justify-content: center;   
+        padding: 10px;
+    }
+
+    .body-h1 {
+   text-align: center;
+    
+    }
+    .body-btn{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+    }
+    .message-logo{
+        position: relative;
+        padding: 15px;
+    }
+    .message-logo img{
+        position: absolute;
+        width: 20px;
+        top: 20px;
+        left: -40px;
+        padding: 5px;
+    }
+    .shop-now{
+        display: flex; 
+        justify-content: space-between; 
+        flex-wrap: wrap;
+      }
+      
+.phone-image{
+    display: none;
+    
+}
+.calculator-form {
+    background: #fff;
+    width: 90%;
+    height: 400px;
+    text-align: center;
+    margin-bottom: -20px;
+}
+input[type=text] {
+    width: 90%;
+    height: 30px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+}
