@@ -92,6 +92,35 @@ Invest now</p>
       </div>
     </div>
    </div>
+   <div class="how-it-works-section">
+       <h1 class="works">HOW IT WORKS</h1>
+   </div>
+   <div class="grid-how-it-works">
+    <div>
+      <img class="how-it-work-img" src="../assets/images/profile.png" alt="">
+      <h3 class="how-it-work-h3">Registeration</h3>
+      <p class="how-it-work-p">Create a profile on the WaveBudget platform in less than five minutes without requiring complex documentation.</p>
+    </div>
+    <div>
+      <img class="how-it-work-img" src="../assets/images/cart.png" alt="">
+      <h3 class="how-it-work-h3">Choose an item to buy</h3>
+      <p class="how-it-work-p">Select an item on the online WaveMart store or visit any of the  partnered physical store/supermarket  to select an item for purchase</p>
+    </div>
+    <div>
+      <img class="how-it-work-img" src="../assets/images/payment.png" alt="">
+      <h3 class="how-it-work-h3">Select a payment plan</h3>
+      <p class="how-it-work-p">The item will be delivered immediately while you continue your payment as planned untill item is fully paid or pay off the purchase.</p>
+    </div>
+     <div>
+      <img class="how-it-work-img" src="../assets/images/delivery.png" alt="">
+      <h3 class="how-it-work-h3">Delivery and payment</h3>
+      <p class="how-it-work-p">The item will be delivered immediately while you continue your payment as planned untill item is fully paid or pay off the purchase.</p>
+    </div>
+</div>
+<div class="join-us">
+  <h1>Join Us</h1>
+
+</div>
 </template>
 
 <script>
