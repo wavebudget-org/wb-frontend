@@ -50,8 +50,8 @@
       ><img src="../assets/images/message.png" alt=""
     /></span>
   </div>
-  <div class="shop-now">
-    <div class="grid-shop-now">
+  <section class="shop-now">
+    <article class="grid-shop-now">
       <h1>
         Split Payment in <br />
         in 5 parts
@@ -64,8 +64,8 @@
         Items you can buy on onstallments includes; food items, laptops, phones,
         furniture, home appliances, houses and much more.
       </p>
-    </div>
-    <div class="grid-shop-now">
+    </article>
+    <article class="grid-shop-now">
       <h1 class="grid-shop-h1">Earn up to 5000naira!</h1>
       <p class="grid-shop-p">Earn up to 5000 as a WaveBudget agent.</p>
       <p class="grid-shop-p">
@@ -75,8 +75,8 @@
       <div class="grid-show-btn">
         <button class="grid-btn">Shop now</button>
       </div>
-    </div>
-    <div class="grid-invest">
+    </article>
+    <article class="grid-invest">
       <h1 class="grid-invest-h1">Micro investment</h1>
       <p class="grid-invest-p">Earn passive income as you use our services.</p>
       <p class="grid-invest-p">
@@ -86,41 +86,40 @@
       <div class="grid-invest-btn">
         <button class="grid-btn">Invest now</button>
       </div>
-    </div>
-  </div>
+    </article>
+  </section>
   <div class="demo-section">
     <h1 class="demo-h1">TRY A DEMO</h1>
     <p class="demo-p">BNPL Calculator</p>
     <div class="bnpl-calculator">
-      <div>
-        <form class="calculator-form">
-          <div class="form-tag">
-            <label>What is your monthly income?</label>
-            <input
-              type="text"
-              placeholder="This information is important to get your credit limit"
-            />
-          </div>
-          <div class="form-tag">
-            <label> What item do you want to buy? </label>
-            <input type="text" placeholder="" />
-          </div>
-          <div class="form-tag">
-            <label>What is the item price range?</label>
-            <input type="text" />
-          </div>
-          <div class="form-tag">
-            <label>Select a payment term</label>
-            <input type="text" />
-          </div>
-          <div class="bnpl-btn">
-            <button class="btn-generate">Generate</button>
-          </div>
-        </form>
-      </div>
-      <div class="phone-image">
-        <img src="../assets/images/phone.png" alt="" />
-      </div>
+      <form class="calculator-form">
+        <div class="form-tag">
+          <label>What is your monthly income?</label>
+          <input
+            type="text"
+            placeholder="This information is important to get your credit limit"
+          />
+        </div>
+        <div class="form-tag">
+          <label> What item do you want to buy? </label>
+          <input type="text" placeholder="" />
+        </div>
+        <div class="form-tag">
+          <label>What is the item price range?</label>
+          <input type="text" />
+        </div>
+        <div class="form-tag">
+          <label>Select a payment term</label>
+          <input type="text" />
+        </div>
+        <div class="bnpl-btn">
+          <button class="btn-generate">Generate</button>
+        </div>
+      </form>
+
+      <!-- <div class="phone-image"> -->
+      <img src="../assets/images/phone.png" alt="" />
+      <!-- </div> -->
     </div>
   </div>
   <div class="how-it-works-section">
@@ -148,7 +147,7 @@
       <h3 class="how-it-work-h3">Select a payment plan</h3>
       <p class="how-it-work-p">
         The item will be delivered immediately while you continue your payment
-        as planned untill item is fully paid or pay off the purchase.
+        as planned until item is fully paid or pay off the purchase.
       </p>
     </div>
     <div>
@@ -156,7 +155,7 @@
       <h3 class="how-it-work-h3">Delivery and payment</h3>
       <p class="how-it-work-p">
         The item will be delivered immediately while you continue your payment
-        as planned untill item is fully paid or pay off the purchase.
+        as planned until item is fully paid or pay off the purchase.
       </p>
     </div>
   </div>
