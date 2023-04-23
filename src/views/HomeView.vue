@@ -32,7 +32,7 @@
   </ul>
   <section class="body-section">
     <div class="body-title">
-      <h1 class="body-h1">Pay for<br />Everything<br />Easily</h1>
+      <h1 class="body-h1">Buy now<br />Everything<br />Easily</h1>
       <p class="body-paragraph">
         Pay now, pay later for items to reach <br />
         other needs that matter, pay back with <br />
@@ -118,7 +118,7 @@
       </form>
 
       <!-- <div class="phone-image"> -->
-      <img src="../assets/images/phone.png" alt="" />
+      <img class="phone-image" src="../assets/images/phone.png" alt="" />
       <!-- </div> -->
     </div>
   </div>
@@ -160,8 +160,180 @@
     </div>
   </div>
   <div class="join-us">
-    <h1>Join Us</h1>
+    <h1 class="join-us-h1" >Join Us Today</h1>
   </div>
+  <main class="main-flex">
+    <div class="individual">Individual</div>
+  <div class="business">Bussiness</div>
+  </main>
+  
+  <section class="join-us-flex">
+   <div class="individual-grid-1">
+    <div class="flex-part">
+     <div> <img class="flex-image" src="../assets/images/payment.png" alt=""></div>
+    <div> 
+    <h3 class="flex-part-h3">Convenient Payment </h3>
+    <p class="flex-part-p">WaveBudget offers individuals a hassle free way to purchase items and pay for them over 
+      time. With flexible payment plans
+       and variety of products available.</p>
+    </div>
+    </div>
+      <div class="flex-part-1">
+     <div> <img class="flex-image" src="../assets/images/setting.png" alt=""></div>
+    <div> 
+    <h3 class="flex-part-h3">100% Secure </h3>
+    <p class="flex-part-p">WaveBudget takes your security seriously, using the latest encryption and 
+      security measures to keep your information safe. </p>
+    </div>
+</div>
+ <div class="flex-part-1">
+     <div> <img class="flex-image" src="../assets/images/home.png" alt=""></div>
+    <div> 
+    <h3 class="flex-part-h3">Affordable Loan</h3>
+    <p class="flex-part-p">WaveBudget loans are designed to meet the needs of individuals with zero interest
+       rates and repayment terms that fits your budget. </p>
+    </div>
+</div>
+<div class="flex-part">
+     <div> <img class="flex-image" src="../assets/images/profile.png" alt=""></div>
+    <div> 
+    <h3 class="flex-part-h3">Easy To Use</h3>
+    <p class="flex-part-p">With the simple registration process and user friendly interface, 
+      WaveBidget is easy to use.</p>
+    </div>
+</div>
+   </div>
+   <div class="individual-grid-2">
+    <div class="flex-part">
+     <div> <img class="flex-image" src="../assets/images/mountain.png" alt=""></div>
+    <div> 
+    <h3 class="flex-part-h3">Convenient Payment </h3>
+    <p class="flex-part-p">WaveBudget offers individuals a hassle free way to purchase items and pay for them over 
+      time. With flexible payment plans
+       and variety of products available.</p>
+    </div>
+    </div>
+      <div class="flex-part-1">
+     <div> <img class="flex-image" src="../assets/images/speaker.png" alt=""></div>
+    <div> 
+    <h3 class="flex-part-h3">100% Secure </h3>
+    <p class="flex-part-p">WaveBudget takes your security seriously, using the latest encryption and 
+      security measures to keep your information safe. </p>
+    </div>
+</div>
+ <div class="flex-part-1">
+     <div> <img class="flex-image" src="../assets/images/human.png" alt=""></div>
+    <div> 
+    <h3 class="flex-part-h3">Affordable Loan</h3>
+    <p class="flex-part-p">WaveBudget loans are designed to meet the needs of individuals with zero interest
+       rates and repayment terms that fits your budget. </p>
+    </div>
+</div>
+<div class="flex-part">
+     <div> <img class="flex-image" src="../assets/images/delivery.png" alt=""></div>
+    <div> 
+    <h3 class="flex-part-h3">Instant Payment</h3>
+    <p class="flex-part-p">With the simple registration process and user friendly interface, 
+      WaveBidget is easy to use.</p>
+    </div>
+</div>
+
+   </div>
+  </section>
+  <section>
+    <div>
+      <h2 class="testimony-h2">Customer Testimony</h2>
+    </div>
+    <div class="testimony-flex">
+       <div class="testimonies">
+        <h4 class="testimony-h4">Thank you for initiating a Buy Now Pay Later platform.
+Thank you for making it easier to use your platform for solving a pain point.
+The system is currently serving its purpose, a dual use for core profession purpose</h4>
+<p class="testimony-p">From  Lagos</p>
+       </div>
+        <div class="testimonies">
+        <h4 class="testimony-h4">The way you  people are running the business is okay, just keep it up, may Almighty ALLAH help us all,
+           and I really appreciate WaveBudget, WaveBudget is my choice. </h4>
+<p class="testimony-p"> From  Lagos</p>
+       </div>
+        <div class="testimonies">
+        <h4 class="testimony-h4" >WaveBudget made my purchase smooth and satisfying.</h4>
+<p class="testimony-p">From  Lagos</p>
+       </div>
+    </div>
+  </section>
+  <section class="app-flex">
+     <div>
+      <h1 class="wave-app">WaveBudget app <br>
+     coming soon.
+     </h1>
+    <div class="app-btn">
+    <button class="btn-body1">Get started</button>
+    <button class="btn-body2">I have a question</button>
+    <span class="message-logo-2"
+      ><img src="../assets/images/message.png" alt=""
+    /></span>
+    </div>
+     </div>
+     <div>
+      <img class="phone-image" src="../assets/images/phone-app.png" alt="">
+     </div>
+  </section>
+  <section class="form-flex">
+    <div>
+    <h3 class="waitlist-h3">Join Waitlist</h3>
+    <form class="last-form">
+     <div>
+       <label>Name</label>
+      <input type="text">
+     </div>
+     <div>
+       <label>Email</label>
+      <input type="text">
+     </div>
+     <div class="form-btn">
+      <button class="form-button">Submit</button>
+     </div>
+    </form>
+    </div>
+    <div>
+      <h1 class="take-control">Take total control of your finance.</h1>
+    </div>
+  </section>
+  <div class="FAQ">FAQ</div>
+  <section class="footer-section" >
+  <footer>
+    <div class="footer-message"> 
+     <p class="reach-out">Reach out
+     <span><img class="reach-out-image" src="../assets/images/g-mail.png" alt=""></span>
+     </p>
+     <img class="message-img" src="../assets/images/twitter.png" alt="">
+     <img class="message-img" src="../assets/images/video.png" alt="">
+     <img class="message-img" src="../assets/images/instagram.png" alt="">
+     <img class="message-img" src="../assets/images/facebook.png" alt="">
+    </div>
+    <div>
+      <h3>About product</h3>
+      <p>Updates
+       Beta test
+</p>
+    </div>
+    <div>
+      <h3>Resources</h3>
+      <p>Help center
+Partners
+News letters</p>
+    </div>
+  </footer>
+  <footer class="@-section">
+    <p class="@-section">@
+      <span>Copyright 2023. All rights reserved</span>
+    </p>
+    <p>Terms and Conditions</p>
+    <p>Privacy Policy</p>
+    
+  </footer>
+  </section>
 </template>
 
 <script>
