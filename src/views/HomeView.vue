@@ -7,14 +7,14 @@
     <div class="flex">
       <nav class="header-navigation">
         <router-link class="links" to="/">Home</router-link>
-        <router-link class="links" to="/shopComponents">Shop</router-link>
-        <router-link class="links" to="/investComponents">Invest</router-link>
+        <router-link class="links" to="/">Shop</router-link>
+        <router-link class="links" to="/">Invest</router-link>
       </nav>
 
       <button class="join-btn">Join waitlist</button>
     </div>
     <div class="drop-down">
-      <img
+      <img class="drop-img"
         @click="mobileNavMenu = !mobileNavMenu"
         src="../assets/images/wave-dropdown.png"
         alt=""
@@ -24,10 +24,10 @@
   <ul class="responsive-li" :class="{ 'responsive-slide': mobileNavMenu }">
     <li><router-link class="nav-list" to="/">Home</router-link></li>
     <li>
-      <router-link class="nav-list" to="/shopComponents">Shop</router-link>
+      <router-link class="nav-list" to="/">Shop</router-link>
     </li>
     <li>
-      <router-link class="nav-list" to="/investComponents">Invest</router-link>
+      <router-link class="nav-list" to="/">Invest</router-link>
     </li>
   </ul>
   <section class="body-section">
@@ -305,12 +305,14 @@ The system is currently serving its purpose, a dual use for core profession purp
   <footer>
     <div class="footer-message"> 
      <p class="reach-out">Reach out
-     <span><img class="reach-out-image" src="../assets/images/g-mail.png" alt=""></span>
+     <span class="footer-span"><img class="reach-out-image" src="../assets/images/g-mail.png" alt=""></span>
      </p>
-     <img class="message-img" src="../assets/images/twitter.png" alt="">
+     <div class="footer-img">
+      <img class="message-img" src="../assets/images/twitter.png" alt="">
      <img class="message-img" src="../assets/images/video.png" alt="">
      <img class="message-img" src="../assets/images/instagram.png" alt="">
      <img class="message-img" src="../assets/images/facebook.png" alt="">
+     </div>
     </div>
     <div>
       <h3>About product</h3>
@@ -318,16 +320,16 @@ The system is currently serving its purpose, a dual use for core profession purp
        Beta test
 </p>
     </div>
-    <div>
+    <div class="footer-resources">
       <h3>Resources</h3>
       <p>Help center
-Partners
-News letters</p>
+       Partners
+        News letters</p>
     </div>
   </footer>
-  <footer class="@-section">
-    <p class="@-section">@
-      <span>Copyright 2023. All rights reserved</span>
+  <footer class="l-section">
+    <p class="l2-section">
+       @ Copyright 2023. All rights reserved
     </p>
     <p>Terms and Conditions</p>
     <p>Privacy Policy</p>

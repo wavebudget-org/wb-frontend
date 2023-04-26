@@ -13,7 +13,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     background: #ebf6f6;
-    overflow-x: hidden;
 }
 
 .top-header {
@@ -111,7 +110,6 @@ a.links:active,
 .body-section {
     display: flex;
     justify-content: space-around;
-    /* grid-template-columns: 1fr 1fr ; */
     padding: 30px;
     margin-top: 100px;
 }
@@ -184,6 +182,7 @@ a.links:active,
     left: -40px;
     padding: 5px;
 }
+
 
 .shop-now {
     display: flex;
@@ -520,11 +519,18 @@ font-size: 50px;
     font-family: Roboto;
     color: #008B8B;
 }
+.footer-img {
+    display: flex;
+    gap: 10px;
+}
 .footer-message {
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 10px;
+}
+.footer-span img {
+    background: #F6F6F6;
 }
 .reach-out {
     border: 1px solid white;
@@ -543,24 +549,31 @@ footer{
     display: flex;
     justify-content: space-around;
     color: #fff;
-    /* margin-bottom: 20px; */
     padding: 20px;
     background: #008B8B;
 }
 .footer-section {
-    background: #008B8B;
     height: 100px;
+     width: 109%;
 }
 @media (min-width: 240px) and (max-width: 720px) {
     .top-header {
-        display: flex;
-        justify-content: space-between;
-        /* margin-top: 10px; */
-        padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 1rem 0.5rem 0.5rem;
+            position: fixed;
+            width: 100%;
+            z-index: 10000;
+            top: 0;
+            /* background-color: rgba(235, 246, 246, 0.9); */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.015);
+            align-items: baseline;
+        
     }
     .header-navigation {
         display: none;
     }
+  
     .join-btn {
         display: none;
     }
@@ -570,6 +583,11 @@ footer{
     .responsive-li {
         background: #263959;
         max-width: 100%;
+        position: fixed;
+        z-index: 10000;
+        left: 0;
+        right: 0;
+        top: 50px;
         color: #fff;
         height: 100px;
         text-align: center;
@@ -632,6 +650,9 @@ footer{
         border-radius: 10px;
         text-align: center;
         width: 120%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .demo-section * {
         text-align: center;
@@ -757,21 +778,39 @@ footer{
         padding: 5px;
     }
     .footer-message {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 10px;
         padding: 10px;
+    }
+    .footer-img {
+        display: flex;
+        justify-content:center;
+        gap: 10px;
+    }
+    .footer-resources h3, p {
+        display: grid;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 20px;
     }
     
 footer{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
     color: #fff;
     padding: 20px;
-    background: #008B8B;
+    width: 100%;
+     background: #008B8B;
+} 
+
+.l-section {
+display: grid;
+justify-content: center; 
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr ;
 }
-.footer-section {
-    width: 90%;
-}
+
 }

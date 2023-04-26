@@ -1,5 +1,5 @@
 <template>
-  <div>WELLCOME TO SHOP COMPONENTS</div>
+  <div></div>
 </template>
 
 <script>

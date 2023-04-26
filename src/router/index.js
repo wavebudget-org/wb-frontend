@@ -10,12 +10,12 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/shopComponents',
+    path: '/',
     name: 'shopComponents',
     component: ShopComponents
   },
   {
-    path: '/investComponents',
+    path: '/',
     name: 'investComponents',
     component: InvestComponents
   },

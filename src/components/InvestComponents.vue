@@ -1,5 +1,5 @@
 <template>
-  <div>WELCOME TO INVEST COMPONENTS</div>
+  <div></div>
 </template>
 
 <script>
