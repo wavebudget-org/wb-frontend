@@ -132,13 +132,14 @@ a.links:active,
   color: #008b8b;
   font-weight: 600;
   line-height: 60px;
+  width: 50%;
 }
 
 .body-btn {
   display: flex;
-  margin: 40px;
   gap: 10px;
-  margin-top: -50px;
+  margin-bottom: 50px;
+  margin-left: 3rem;
 }
 
 .h1 {
@@ -539,10 +540,14 @@ a.links:active,
   color: #fff;
 }
 
+.footer__ h3 {
+  margin-bottom: 0.5rem;
+}
+
 .first_div {
   display: flex;
   justify-content: space-between;
-  width: 40%;
+  width: 55%;
   gap: 0.5rem;
   align-items: center;
 }
@@ -562,10 +567,6 @@ a.links:active,
   height: 25px;
 }
 
-/* .reach_out p {
-  margin-right: 3rem;
-} */
-
 .reach_out span {
   position: absolute;
   top: 5px;
@@ -584,42 +585,13 @@ a.links:active,
   height: 100% !important;
 }
 
-/* 
-.footer-img {
-  display: flex;
-  gap: 10px;
+.businesses .cont {
+  background-color: #12617a;
 }
 
-.footer-message {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px;
+.businesses h3 {
+  color: #12617a;
 }
-
-.footer-span img {
-  background: #f6f6f6;
-}
-
-.reach-out {
-  border: 1px solid white;
-  font-weight: 700;
-  padding: 10px;
-  border-radius: 12px;
-}
-
-.reach-out-image img {
-  background: #f6f6f6;
-}
-
-.message-img {
-  width: 20px;
-}
-
-.footer-section {
-  height: 100px;
-  width: 109%;
-} */
 
 @media (min-width: 240px) and (max-width: 720px) {
   .top-header {
@@ -685,6 +657,11 @@ a.links:active,
   }
   .body-h1 {
     text-align: center;
+    width: 100%;
+  }
+  .body-paragraph {
+    text-align: center;
+    width: 95%;
   }
   .body-btn {
     display: flex;
@@ -692,6 +669,7 @@ a.links:active,
     gap: 10px;
     margin-top: 30px;
     width: 100%;
+    margin-left: 0;
   }
   .message-logo {
     position: relative;
@@ -743,12 +721,9 @@ a.links:active,
     text-align: center;
     margin-bottom: -20px;
   }
-  /* input[type="text"] {
-        width: 90%;
-        height: 30px;
-        border-radius: 12px;
-        padding: 10px;
-    } */
+  .first_div {
+    width: 100%;
+  }
   .grid-how-it-works {
     display: grid;
     margin-top: 40px;
@@ -804,11 +779,14 @@ a.links:active,
   .waitlist-h3 {
     margin: 10px;
     text-align: center;
+    width: 100%;
+    margin: 1rem auto;
   }
   .take-control {
     font-weight: 600;
     /* font-size: 50px; */
     text-align: center;
+    grid-column: 1 / span 2;
   }
   .message-logo-2 {
     position: relative;
@@ -839,14 +817,12 @@ a.links:active,
     flex-wrap: wrap;
     margin: 20px;
   }
-  footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    color: #fff;
-    padding: 20px;
-    width: 100%;
-    background: #008b8b;
+  .footer__ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 3rem;
   }
   .l-section {
     display: grid;

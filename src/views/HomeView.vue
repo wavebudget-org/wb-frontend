@@ -31,27 +31,29 @@
       <router-link class="nav-list" to="/">Invest</router-link>
     </li>
   </ul>
-  <section class="body-section">
+
+  <section
+    v-for="(car, index) in carousel"
+    :key="index"
+    class="body-section"
+    v-show="current === index"
+  >
     <div class="body-title">
-      <h1 class="body-h1">Buy now<br />Everything<br />Easily</h1>
+      <h1 class="body-h1">{{ car.title }}</h1>
       <p class="body-paragraph">
-        Pay now, pay later for items to reach <br />
-        other needs that matter, pay back with <br />
-        0% interest rate
+        {{ car.paragraph }}
       </p>
     </div>
     <div class="body-image">
-      <img src="../assets/images/wrist-watch.png" alt="image_alt" />
+      <img :src="require(`../assets/carousel/${car.img}.png`)" :alt="car.img" />
     </div>
   </section>
+
   <div class="body-btn">
     <button class="btn-body1">Get started</button>
     <button class="btn-body2">
       I have a question <img src="../assets/images/message.png" alt="" />
     </button>
-    <!-- <span class="message-logo"
-      ><img src="../assets/images/message.png" alt=""
-    /></span> -->
   </div>
   <section class="shop-now">
     <article class="grid-shop-now">
@@ -195,7 +197,7 @@
         </div>
       </div>
     </article>
-    <article class="join-us-flex">
+    <article class="join-us-flex businesses">
       <h3 class="header">Businesses</h3>
       <div class="individual-grid-1">
         <div class="cont" v-for="business in businesses" :key="business.title">
@@ -304,44 +306,6 @@
     <p>Terms and Conditions</p>
     <p>Privacy Policy</p>
   </footer>
-  <!-- <section class="footer-section">
-    <footer>
-      <div class="footer-message">
-        <p class="reach-out">
-          Reach out
-          <span class="footer-span"
-            ><img
-              class="reach-out-image"
-              src="../assets/images/g-mail.png"
-              alt=""
-          /></span>
-        </p>
-        <div class="footer-img">
-          <img class="message-img" src="../assets/images/twitter.png" alt="" />
-          <img class="message-img" src="../assets/images/video.png" alt="" />
-          <img
-            class="message-img"
-            src="../assets/images/instagram.png"
-            alt=""
-          />
-          <img class="message-img" src="../assets/images/facebook.png" alt="" />
-        </div>
-      </div>
-      <div>
-        <h3>About product</h3>
-        <p>Updates Beta test</p>
-      </div>
-      <div class="footer-resources">
-        <h3>Resources</h3>
-        <p>Help center Partners News letters</p>
-      </div>
-    </footer>
-    <footer class="l-section">
-      <p class="l2-section">@ Copyright 2023. All rights reserved</p>
-      <p>Terms and Conditions</p>
-      <p>Privacy Policy</p>
-    </footer>
-  </section> -->
 </template>
 
 <script>
@@ -356,7 +320,7 @@ export default {
       individuals: [
         {
           img: "payment",
-          title: "Convenent Payment",
+          title: "Convenient Payment",
           paragraph:
             "WaveBudget offers individuals a hassle free way to purchase items and pay for them over time. With flexible payment plans and variety of products available.",
         },
@@ -406,17 +370,42 @@ export default {
         },
       ],
       carousel: [
-        { title: "", paragraph: "", img: "" },
-        { title: "", paragraph: "", img: "" },
-        { title: "", paragraph: "", img: "" },
+        {
+          title: "Pay for Everything Easily ",
+          paragraph: `Buy now, pay later for items to reach 
+        other needs that matter, pay back with 
+        0% interest rate`,
+          img: "wrist-watch",
+        },
+        {
+          title: "Gain  Financial  Independence",
+          paragraph: "Pay small with 0% interest",
+          img: "house",
+        },
+        {
+          title: "Gain  Access  To  Affordable Loans",
+          paragraph: "Pay small with 0% interest",
+          img: "man_",
+        },
       ],
+      interval: null,
+      current: 0,
     };
   },
   methods: {
-    animate() {},
+    animate() {
+      this.interval = setInterval(() => {
+        const index =
+          this.current < this.carousel.length - 1 ? this.current + 1 : 0;
+        this.current = index;
+      }, 2000);
+    },
   },
   mounted() {
     this.animate();
+  },
+  beforeUnmounted() {
+    clearInterval(this.interval);
   },
 };
 </script>
