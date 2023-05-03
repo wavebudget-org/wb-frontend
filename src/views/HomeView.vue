@@ -1,133 +1,13 @@
 <template>
-  <header class="top-header">
-    <div class="logo">
-      <img src="../assets/images/wave-logo.png" alt="" />
-      <span class="logo-span">WAVE <br />BUDGET</span>
-    </div>
-    <div class="flex">
-      <nav class="header-navigation">
-        <router-link class="links" to="/">Home</router-link>
-        <router-link class="links" to="/">Shop</router-link>
-        <router-link class="links" to="/">Invest</router-link>
-      </nav>
+  <main>
+    <Hero />
+    <Button btn_1="Get started" btn_2="I have a question" />
+    <SectionVue />
+    <Demo />
+    <how-it-works></how-it-works>
+  </main>
 
-      <button class="join-btn">Join waitlist</button>
-    </div>
-    <div class="drop-down">
-      <img
-        class="drop-img"
-        @click="mobileNavMenu = !mobileNavMenu"
-        src="../assets/images/wave-dropdown.png"
-        alt=""
-      />
-    </div>
-  </header>
-  <ul class="responsive-li" :class="{ 'responsive-slide': mobileNavMenu }">
-    <li><router-link class="nav-list" to="/">Home</router-link></li>
-    <li>
-      <router-link class="nav-list" to="/">Shop</router-link>
-    </li>
-    <li>
-      <router-link class="nav-list" to="/">Invest</router-link>
-    </li>
-  </ul>
-
-  <section
-    v-for="(car, index) in carousel"
-    :key="index"
-    class="body-section"
-    v-show="current === index"
-  >
-    <div class="body-title">
-      <h1 class="body-h1">{{ car.title }}</h1>
-      <p class="body-paragraph">
-        {{ car.paragraph }}
-      </p>
-    </div>
-    <div class="body-image">
-      <img :src="require(`../assets/carousel/${car.img}.png`)" :alt="car.img" />
-    </div>
-  </section>
-
-  <div class="body-btn">
-    <button class="btn-body1">Get started</button>
-    <button class="btn-body2">
-      I have a question <img src="../assets/images/message.png" alt="" />
-    </button>
-  </div>
-  <section class="shop-now">
-    <article class="grid-shop-now">
-      <h1>
-        Split Payment in <br />
-        in 5 parts
-      </h1>
-      <p>
-        Spread payment on items to meet other needs that matters, pay back in
-        installments at zero interest rate
-      </p>
-      <p>
-        Items you can buy on onstallments includes; food items, laptops, phones,
-        furniture, home appliances, houses and much more.
-      </p>
-    </article>
-    <article class="grid-shop-now">
-      <h1 class="grid-shop-h1">Earn up to 5000naira!</h1>
-      <p class="grid-shop-p">Earn up to 5000 as a WaveBudget agent.</p>
-      <p class="grid-shop-p">
-        Invite friends to shop on WaveBudget and get rewarded for it.Refer us
-        now.
-      </p>
-      <div class="grid-show-btn">
-        <button class="grid-btn">Shop now</button>
-      </div>
-    </article>
-    <article class="grid-invest">
-      <h1 class="grid-invest-h1">Micro investment</h1>
-      <p class="grid-invest-p">Earn passive income as you use our services.</p>
-      <p class="grid-invest-p">
-        Deposit as low as 10,000naira in your GAD account and watch your money
-        grow. Invest now
-      </p>
-      <div class="grid-invest-btn">
-        <button class="grid-btn">Invest now</button>
-      </div>
-    </article>
-  </section>
-  <article class="demo-section">
-    <h1 class="demo-h1">TRY A DEMO</h1>
-    <p class="demo-p">BNPL Calculator</p>
-    <section class="bnpl_table">
-      <form>
-        <div class="form-control">
-          <label for="monthly_income">What is your monthly income</label>
-          <input
-            type="text"
-            placeholder="This information is important to get your credit limit"
-          />
-        </div>
-        <div class="form-control">
-          <label for="what_you_want_to_buy"
-            >What item do you want to buy?</label
-          >
-          <input type="text" />
-        </div>
-        <div class="form-control">
-          <label for="price_range">What is the item price range?</label>
-          <input type="text" />
-        </div>
-
-        <div class="form-control">
-          <label for="select_payment">Select a payment term</label>
-          <input type="text" />
-        </div>
-        <div class="form-btn">
-          <button class="form-button">Submit</button>
-        </div>
-      </form>
-      <img class="phone-image" src="../assets/images/phone.png" alt="" />
-    </section>
-  </article>
-  <div class="how-it-works-section">
+  <!-- <div class="how-it-works-section">
     <h1 class="works">HOW IT WORKS</h1>
   </div>
   <div class="grid-how-it-works">
@@ -173,7 +53,7 @@
         as planned until item is fully paid or pay off the purchase.
       </p>
     </div>
-  </div>
+  </div> -->
 
   <section class="join-us">
     <h1 class="join-us-h1">Join Us Today!</h1>
@@ -245,12 +125,7 @@
   <section class="bnpl_table">
     <div class="coming_soon">
       <h1 class="h1">WaveBudget app coming soon.</h1>
-      <div class="body-btn">
-        <button class="btn-body1">Join the waitlist</button>
-        <button class="btn-body2">
-          I have a question <img src="../assets/images/message.png" alt="" />
-        </button>
-      </div>
+      <Button btn_1="Join the waitlist" btn_2="I have a question" />
     </div>
     <img class="phone-image" src="../assets/images/phone-app.png" alt="" />
   </section>
@@ -310,13 +185,22 @@
 
 <script>
 // @ is an alias to /src
-
+import Hero from "../components/Hero.vue";
+import Button from "../components/UI/Button.vue";
+import SectionVue from "../components/SectionVue.vue";
+import Demo from "../components/Demo.vue";
+import HowItWorks from "../components/HowItWorks.vue";
 export default {
   name: "HomeView",
-  components: {},
+  components: {
+    Hero,
+    Button,
+    SectionVue,
+    Demo,
+    HowItWorks,
+  },
   data() {
     return {
-      mobileNavMenu: false,
       individuals: [
         {
           img: "payment",
@@ -369,43 +253,22 @@ export default {
             " With the simple registration process and user friendly interface, WaveBidget is easy to use.",
         },
       ],
-      carousel: [
-        {
-          title: "Pay for Everything Easily ",
-          paragraph: `Buy now, pay later for items to reach 
-        other needs that matter, pay back with 
-        0% interest rate`,
-          img: "wrist-watch",
-        },
-        {
-          title: "Gain  Financial  Independence",
-          paragraph: "Pay small with 0% interest",
-          img: "house",
-        },
-        {
-          title: "Gain  Access  To  Affordable Loans",
-          paragraph: "Pay small with 0% interest",
-          img: "man_",
-        },
-      ],
-      interval: null,
-      current: 0,
     };
   },
-  methods: {
-    animate() {
-      this.interval = setInterval(() => {
-        const index =
-          this.current < this.carousel.length - 1 ? this.current + 1 : 0;
-        this.current = index;
-      }, 2000);
-    },
-  },
-  mounted() {
-    this.animate();
-  },
-  beforeUnmounted() {
-    clearInterval(this.interval);
-  },
+  // methods: {
+  //   animate() {
+  //     this.interval = setInterval(() => {
+  //       const index =
+  //         this.current < this.carousel.length - 1 ? this.current + 1 : 0;
+  //       this.current = index;
+  //     }, 2000);
+  //   },
+  // },
+  // mounted() {
+  //   this.animate();
+  // },
+  // beforeUnmounted() {
+  //   clearInterval(this.interval);
+  // },
 };
 </script>
