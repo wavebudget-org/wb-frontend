@@ -54,6 +54,7 @@ const how_it_works = reactive([
   padding: 20px;
   justify-content: space-between;
   gap: 20px;
+  align-items: baseline;
 }
 .div {
   display: flex;

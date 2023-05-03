@@ -22,6 +22,7 @@ export default {
   gap: 10px;
   margin-bottom: 50px;
   padding-left: 4.5rem;
+  margin-top: 2rem;
 }
 .body-btn button {
   all: unset;
@@ -65,6 +66,12 @@ export default {
     margin-top: 30px;
     width: 100%;
     margin-left: 0;
+    padding-left: 2rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .body-btn {
+    padding-left: 1rem;
   }
 }
 </style>
