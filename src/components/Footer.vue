@@ -86,7 +86,11 @@
   justify-content: center;
   padding: 0.3rem;
 }
-
+@media screen and (max-width: 620px) {
+  .cont {
+    height: 260px;
+  }
+}
 .reach_out img {
   width: 100%;
   height: 100% !important;
@@ -118,6 +122,11 @@
     gap: 3rem;
     padding: 3rem 2rem;
   }
+
+  .footer__ p {
+    font-size: 16px;
+  }
+
   .first_div {
     margin: 0 auto;
     width: 65%;
