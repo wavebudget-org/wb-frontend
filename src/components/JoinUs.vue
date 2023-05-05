@@ -74,7 +74,6 @@ const businesses = reactive([
           </div>
         </div>
       </div>
-      
     </article>
     <article class="join-us-flex businesses">
       <h3 class="header">Businesses</h3>
@@ -130,9 +129,12 @@ const businesses = reactive([
 .cont {
   display: flex;
   padding: 0.5rem;
-  align-items: center;
+  align-items: flex-start;
   color: #fff;
   background-color: #12617a;
+  height: 225px;
+  padding-top: 1rem;
+  column-gap: 0.6rem;
 }
 
 .cont::after {
@@ -167,6 +169,31 @@ const businesses = reactive([
 .businesses h3 {
   color: #008b8b;
 }
+@media screen and (max-width: 960px) {
+  .cont {
+    height: 280px;
+  }
+}
+@media screen and (max-width: 890px) {
+  .cont {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .individual-grid-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .cont {
+    height: 125px;
+  }
+  .cont img {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 720px) {
   .individual-grid-1 {
     display: grid;
@@ -175,21 +202,31 @@ const businesses = reactive([
     gap: 20px;
     padding: 20px;
   }
-  .individual-grid-2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 20px;
-    padding: 20px;
+  .cont {
+    height: 160px;
   }
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 620px) {
+  .cont {
+    height: 220px;
+  }
+}
+@media screen and (max-width: 590px) {
+  .cont {
+    height: 280px;
+  }
+}
+@media screen and (max-width: 528px) {
   .join-us {
     display: grid;
     grid-template-columns: auto;
   }
   .join-us-h1 {
     grid-column: 1 / span 1;
+  }
+  .cont {
+    padding: 1rem;
+    height: max-content;
   }
 }
 </style>

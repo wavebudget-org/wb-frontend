@@ -15,12 +15,12 @@ const carousel = ref([
   },
   {
     title: "Gain  Financial  Independence",
-    paragraph: "Pay small with 0% interest",
+    paragraph: "Pay small small with 0% interest",
     img: "house",
   },
   {
     title: "Gain  Access  To  Affordable Loans",
-    paragraph: "Pay small with 0% interest",
+    paragraph: "Pay small small with 0% interest",
     img: "man_",
   },
 ]);
@@ -72,8 +72,7 @@ onBeforeMount(() => {
 }
 
 .body-paragraph {
-  margin-top: 1rem;
-
+  margin-top: 3rem;
   width: 60%;
 }
 
@@ -83,10 +82,10 @@ onBeforeMount(() => {
 
 .body-h1 {
   font-size: 3rem;
-  color: #12617a;
+  color: #008b8b;
   font-weight: 600;
   line-height: 60px;
-  width: 60%;
+  width: 50%;
 }
 @media screen and (max-width: 720px) {
   .body-image {

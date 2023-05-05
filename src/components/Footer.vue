@@ -30,7 +30,7 @@
       Partners
       <p>News letters</p>
     </div>
-    <p>@ Copyright {{ new Date().getFullYear() }}. All rights reserved</p>
+    <p>&#169; Copyright {{ new Date().getFullYear() }}. All rights reserved</p>
     <p>Terms and Conditions</p>
     <p>Privacy Policy</p>
   </footer>
@@ -38,7 +38,7 @@
 <style scoped>
 .footer__ {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 50% 25% 25%;
   row-gap: 2rem;
   width: 100%;
   justify-content: space-around;
@@ -123,9 +123,9 @@
     width: 65%;
   }
 }
-@media screen and (max-width:540px){
-    .first_div{
-        width:90%;
-    }
+@media screen and (max-width: 540px) {
+  .first_div {
+    width: 90%;
+  }
 }
 </style>
