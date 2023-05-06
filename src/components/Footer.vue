@@ -27,7 +27,7 @@
       <h3>Resources</h3>
       <p>Help center</p>
       <p>Partners</p>
-      Partners
+
       <p>News letters</p>
     </div>
     <p>&#169; Copyright {{ new Date().getFullYear() }}. All rights reserved</p>
@@ -43,12 +43,13 @@
   width: 100%;
   justify-content: space-around;
   background-color: #008b8b;
-  padding: 3rem 1rem 2rem 1rem;
+  /* padding: 3rem 1rem 2rem 1rem; */
   color: #fff;
+  padding: 2rem 4.5rem;
 }
 
 .footer__ h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .first_div {
@@ -86,11 +87,7 @@
   justify-content: center;
   padding: 0.3rem;
 }
-@media screen and (max-width: 620px) {
-  .cont {
-    height: 260px;
-  }
-}
+
 .reach_out img {
   width: 100%;
   height: 100% !important;
