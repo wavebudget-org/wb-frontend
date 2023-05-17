@@ -31,7 +31,8 @@ export default {
     onClick () {
        this.$emit('show-answer')
     
-    }
+    },
+  
   }
 }
 </script>

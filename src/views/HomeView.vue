@@ -46,6 +46,7 @@ export default {
     Footer,
     FAQ
   }, 
+  //  emits: ['show-answer'],
   data () {
     return {
       questions : [],
@@ -56,6 +57,7 @@ export default {
     toggleAnswer () {
     this.showAnswer = !this.showAnswer
     }
+
   },
   created() {
       this.questions = [
