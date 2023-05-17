@@ -15,7 +15,7 @@
           <button class="form-button submit">Submit</button>
         </span>
       </form>
-      <h1 class="take-control">Take total control of your finance.</h1>
+      <h1 class="take-control">Take total control <br> of your finance.</h1>
     </div>
   </section>
 </template>

@@ -153,8 +153,13 @@ const businesses = reactive([
 }
 
 .cont div {
-  text-align: start;
-}
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  }
 
 .cont p {
   font-size: 0.8rem;

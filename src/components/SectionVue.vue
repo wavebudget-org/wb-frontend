@@ -55,6 +55,7 @@
 .grid-invest {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
   justify-content: space-between;
 }
@@ -92,6 +93,8 @@ article span {
   color: #fff;
   gap: 20px;
 }
+
+
 
 @media screen and (max-width: 720px) {
   .shop-now {
