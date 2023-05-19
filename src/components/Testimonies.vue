@@ -19,11 +19,13 @@ const testimonies = reactive([
     location: "From Lagos",
   },
   {
-    paragraph: "The laptop got to her yesterday, she is very happy about it, thank you so much.",
+    paragraph:
+      "The laptop got to her yesterday, she is very happy about it, thank you so much.",
     location: "From kaduna",
   },
   {
-    paragraph: "The laptop is neat and is in good shape. it's working fine and the performance is enough.Also grateful for prompt delivery.",
+    paragraph:
+      "The laptop is neat and is in good shape. it's working fine and the performance is enough.Also grateful for prompt delivery.",
     location: "From Abuja",
   },
 ]);
@@ -52,7 +54,6 @@ const testimonies = reactive([
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-
 }
 
 .testimony-flex {
@@ -60,8 +61,7 @@ const testimonies = reactive([
   justify-content: center;
   gap: 1rem;
   padding: 2rem;
-  grid-template-columns: auto auto auto ;
-
+  grid-template-columns: auto auto auto;
 }
 
 .testimonies h4 {
