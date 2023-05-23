@@ -32,15 +32,15 @@ data() {
     padding: 1rem;
     margin: 1rem;
     font-family: Roboto;
-   font-size: 24px;
+   font-size: 15px;
    font-weight: 400;
-   line-height: 28px;
+   /* line-height: 28px; */
    letter-spacing: 0em;
-     text-align: left;
+    text-align: left;
 
    }
    .p {
-     font-family: Roboto;
+ font-family: Roboto;
    font-size: 24px;
    font-weight: 500;
    line-height: 28px;
