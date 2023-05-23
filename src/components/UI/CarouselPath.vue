@@ -1,4 +1,5 @@
 <template>
+   <h1 class="carousel-h1">Customer Testimonies</h1>
   <carousel-button
    @next="next"
     @prev="prev">
@@ -78,6 +79,16 @@ if(this.visibleSlide <= 0) {
 }
 </script>
 
-<style>
+<style scoped>
+.carousel-h1 {
+font-family: Roboto;
+font-size: 48px;
+font-weight: 600;
+margin: 2rem;
+letter-spacing: 0em;
+text-align: center;
+color: #12617A;
+text-transform: uppercase;
 
+}
 </style>
