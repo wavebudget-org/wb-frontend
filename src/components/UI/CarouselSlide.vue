@@ -30,11 +30,10 @@ data() {
    }
    p {
     padding: 1rem;
-    margin: 1rem;
+    margin: 0,7rem;
     font-family: Roboto;
    font-size: 15px;
    font-weight: 400;
-   /* line-height: 28px; */
    letter-spacing: 0em;
     text-align: left;
 
@@ -47,4 +46,5 @@ data() {
    letter-spacing: 0em;
      text-align: left;
    }
+   
 </style>

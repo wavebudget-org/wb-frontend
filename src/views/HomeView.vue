@@ -54,6 +54,5 @@ export default {
     FAQ,
     CarouselPath
   },
-  //  emits: ['show-answer'],
 };
 </script>
