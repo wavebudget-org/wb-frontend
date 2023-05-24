@@ -6,7 +6,8 @@
     <Demo />
     <how-it-works></how-it-works>
     <JoinUs />
-    <Testimonies />
+     <CarouselPath/>
+    <!-- <Testimonies /> -->
     <section class="bnpl_table">
       <div class="coming_soon">
         <h1 class="h1">
@@ -19,7 +20,9 @@
     </section>
     <WaitList />
     <FAQ />
+   
     <Footer />
+    
   </main>
 </template>
 
@@ -31,10 +34,11 @@ import SectionVue from "../components/SectionVue.vue";
 import Demo from "../components/Demo.vue";
 import HowItWorks from "../components/HowItWorks.vue";
 import JoinUs from "../components/JoinUs.vue";
-import Testimonies from "../components/Testimonies.vue";
+// import Testimonies from "../components/Testimonies.vue";
 import WaitList from "../components/WaitList.vue";
 import Footer from "../components/Footer.vue";
 import FAQ from "@/components/FAQ";
+import CarouselPath from "@/components/UI/CarouselPath"
 export default {
   name: "HomeView",
   components: {
@@ -44,11 +48,11 @@ export default {
     Demo,
     HowItWorks,
     JoinUs,
-    Testimonies,
+    // Testimonies,
     WaitList,
     Footer,
     FAQ,
+    CarouselPath
   },
-  //  emits: ['show-answer'],
 };
 </script>

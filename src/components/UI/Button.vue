@@ -9,10 +9,10 @@ export default {
 <template>
   <div class="body-btn">
     <button>{{ btn_1 }}</button>
-    <button>
-      <span
+    <button >
+      <a href="https://wa.me/2348137960202?text=hello,%20"
         >{{ btn_2 }} <img src="../../assets/images/message.png" alt="message"
-      /></span>
+      /></a>
     </button>
   </div>
 </template>
@@ -46,9 +46,10 @@ export default {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.35) !important ;
 }
 
-.body-btn button:last-child span {
+.body-btn button:last-child a {
   position: relative !important;
   padding: 0.9rem;
+  text-decoration: none;
   margin-left: -1rem;
 }
 
