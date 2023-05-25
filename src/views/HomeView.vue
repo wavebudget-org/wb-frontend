@@ -6,7 +6,7 @@
     <Demo />
     <how-it-works></how-it-works>
     <JoinUs />
-     <CarouselPath/>
+    <CarouselPath />
     <!-- <Testimonies /> -->
     <section class="bnpl_table">
       <div class="coming_soon">
@@ -20,9 +20,8 @@
     </section>
     <WaitList />
     <FAQ />
-   
+
     <Footer />
-    
   </main>
 </template>
 
@@ -38,7 +37,7 @@ import JoinUs from "../components/JoinUs.vue";
 import WaitList from "../components/WaitList.vue";
 import Footer from "../components/Footer.vue";
 import FAQ from "@/components/FAQ";
-import CarouselPath from "@/components/UI/CarouselPath"
+import CarouselPath from "@/components/UI/CarouselPath";
 export default {
   name: "HomeView",
   components: {
@@ -52,7 +51,7 @@ export default {
     WaitList,
     Footer,
     FAQ,
-    CarouselPath
+    CarouselPath,
   },
 };
 </script>

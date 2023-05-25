@@ -30,7 +30,7 @@
           <input type="text" />
         </div>
         <div class="form-btn">
-          <button class="form-button">Submit</button>
+          <button class="form-button">Generate</button>
         </div>
       </form>
       <img class="phone-image" src="../assets/images/phone.png" alt="phone" />

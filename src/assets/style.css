@@ -135,7 +135,7 @@
 
 .take-control {
     font-weight: 600;
-    font-size: 50px;
+    font-size: 30px;
     text-align: start;
     width: 60%;
     margin: 2rem auto 0 auto;
@@ -161,8 +161,11 @@
     }
     .h1 {
         text-align: center;
+<<<<<<< HEAD
         margin: 2rem;
         font-size: 3rem;
+=======
+>>>>>>> 84573185caaf19869dee536a3c7e305bdc79645f
     }
     .message-logo {
         position: relative;
