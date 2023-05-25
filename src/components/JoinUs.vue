@@ -144,16 +144,18 @@ const businesses = reactive([
 }
 
 .cont img {
-  float: left;
+  /* float: left; */
+  display: flex;
+  justify-content: center;
   padding: 1rem;
-  border-radius: 50%;
+  border-radius: 30%;
   background-color: #fff;
   margin: auto 0.4rem;
   width: 70px;
 }
 
 .cont div {
-  /* text-align: center; */
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -177,6 +179,13 @@ const businesses = reactive([
 @media screen and (max-width: 960px) {
   .cont {
     height: 280px;
+  
+  }
+  .cont img {
+    display: flex;
+    justify-content: center;
+    margin: auto ;
+    align-items: center;
   }
 }
 @media screen and (max-width: 890px) {
@@ -196,7 +205,9 @@ const businesses = reactive([
     height: 125px;
   }
   .cont img {
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin: auto;
   }
 }
 @media screen and (max-width: 720px) {
@@ -210,15 +221,30 @@ const businesses = reactive([
   .cont {
     height: 160px;
   }
+  .cont img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
 }
 @media screen and (max-width: 620px) {
   .cont {
     height: 220px;
   }
+  .cont img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
 }
 @media screen and (max-width: 590px) {
   .cont {
     height: 280px;
+  }
+  .cont img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
   }
 }
 @media screen and (max-width: 528px) {
@@ -232,6 +258,11 @@ const businesses = reactive([
   .cont {
     padding: 1rem;
     height: max-content;
+  }
+  .cont img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
   }
 }
 </style>

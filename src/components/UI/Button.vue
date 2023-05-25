@@ -38,6 +38,7 @@ export default {
   background: #008b8b !important;
   color: #f8f8f8 !important;
   font-weight: 600 !important;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.35) !important ;
 }
 
 .body-btn button:last-child {
@@ -50,6 +51,8 @@ export default {
   position: relative !important;
   padding: 0.9rem;
   text-decoration: none;
+  /* color: black; */
+    color: #008b8b;
   margin-left: -1rem;
 }
 

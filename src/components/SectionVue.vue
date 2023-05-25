@@ -2,25 +2,25 @@
   <section class="shop-now">
     <article class="grid-shop-now">
       <div>
-        <h3>Split Payment in in 5 parts</h3>
+        <h3>Split Payment in 5 parts</h3>
         <p>
           Spread payment on items to meet other needs that matters, pay back in
           installments at zero interest rate
         </p>
         <span>
-          Items you can buy on onstallments includes; food items, laptops,
+          Items you can buy on installments includes; food items, laptops,
           phones, furniture, home appliances, houses and much more.
         </span>
       </div>
       <div>
         <h3>Earn up to 5000naira!</h3>
-        <p class="grid-shop-p">Earn up to 5000 as a WaveBudget agent.</p>
-        <span class="grid-shop-p">
+        <p>Earn up to 5000 as a WaveBudget agent.</p>
+        <span>
           Invite friends to shop on WaveBudget and get rewarded for it.Refer us
           now.
         </span>
       </div>
-      <button class="grid-btn">Shop now</button>
+       <button class="grid-btn">Shop now</button>
     </article>
     <article class="grid-invest">
       <h3>Micro investment</h3>
@@ -29,7 +29,6 @@
         Deposit as low as 10,000naira in your GAD account and watch your money
         grow. Invest now
       </span>
-
       <button class="grid-btn">Invest now</button>
     </article>
   </section>
@@ -40,6 +39,8 @@
   grid-template-columns: 60% 38%;
   gap: 1.5%;
 }
+
+
 .shop-now article {
   padding-top: 2rem;
 }
@@ -47,18 +48,19 @@
   padding: 2rem 4.5rem;
   column-gap: 4rem;
   display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-between;
+  grid-template-columns:  auto  auto;
+  justify-content: space-around;
   row-gap: 2rem;
+  align-items: center;
 }
 .shop-now article:first-child div,
 .grid-invest {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1.5rem;
   justify-content: space-between;
 }
+
 .shop-now article:last-child {
   padding-right: 4.5rem;
 }
@@ -72,11 +74,11 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
-
   font-weight: 700;
   color: #008b8b;
   margin: 0 auto;
   width: 60%;
+
 }
 article span {
   font-weight: 300;
@@ -86,10 +88,14 @@ article span {
   width: 100%;
   padding: 20px;
   color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .grid-invest {
   background: #12617a;
-  padding: 20px;
+  padding: 50px;
   color: #fff;
   gap: 20px;
 }

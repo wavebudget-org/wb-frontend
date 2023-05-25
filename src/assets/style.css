@@ -1,5 +1,5 @@
 .h1 {
-    font-size: 2.4rem;
+    font-size: 4.0rem;
     color: #008b8b;
     margin-bottom: 4rem;
     padding: 10px;
@@ -162,6 +162,7 @@
     .h1 {
         text-align: center;
         margin: 2rem;
+        font-size: 3rem;
     }
     .message-logo {
         position: relative;
