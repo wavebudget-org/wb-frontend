@@ -106,6 +106,7 @@ article span {
   .shop-now {
     grid-template-columns: 100%;
     gap: 2rem;
+    justify-content: center;
   }
   .shop-now article:first-child {
     padding-left: 2rem;

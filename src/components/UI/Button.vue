@@ -66,7 +66,7 @@ export default {
   .body-btn {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     margin-top: 30px;
     width: 100%;
     margin-left: 0;
