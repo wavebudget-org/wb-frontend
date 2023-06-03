@@ -125,7 +125,11 @@ h1 {
   width: 150px;
   background: white;
   color: #000;
+  gap: 20px;
 
+}
+h1 {
+  text-align: center;
 }
 }
 </style>
