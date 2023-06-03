@@ -1,7 +1,7 @@
 <template>
-  <section class="shop-now">
-    <article class="grid-shop-now">
-      <div>
+<section class="shop_now">
+  <div class="grid_shop_now">
+   <div class="shop_section">
         <h3>Split Payment in 5 parts</h3>
         <p>
           Spread payment on items to meet other needs that matters, pay back in
@@ -11,60 +11,76 @@
           Items you can buy on installments includes; food items, laptops,
           phones, furniture, home appliances, houses and much more.
         </span>
-      </div>
-      <div>
-        <h3>Earn up to 5000naira!</h3>
+  </div>
+   <div class="shop_section">
+        <h3 class="h3">Earn up to 5000naira!</h3>
         <p>Earn up to 5000 as a WaveBudget agent.</p>
-        <span>
+        <span class="span">
           Invite friends to shop on WaveBudget and get rewarded for it.Refer us
           now.
         </span>
       </div>
-       <button class="grid-btn">Shop now</button>
-    </article>
-    <article class="grid-invest">
-      <h3>Micro investment</h3>
+      <button class="grid_btn">Shop</button>
+  </div>
+  <div class="grid_invest">
+    <h3>Micro investment</h3>
+    <div class="invest-section">
       <p class="grid-invest-p">Earn passive income as you use our services.</p>
       <span class="grid-invest-p">
         Deposit as low as 10,000naira in your GAD account and watch your money
         grow. Invest now
       </span>
-      <button class="grid-btn">Invest now</button>
-    </article>
-  </section>
+      </div>
+      <button class="grid_btn">Invest Now</button>
+  </div>
+</section>
 </template>
 <style scoped>
-.shop-now {
+.shop_now {
   display: grid;
   grid-template-columns: 60% 38%;
   gap: 1.5%;
 }
-
-
-.shop-now article {
-  padding-top: 2rem;
-}
-.shop-now article:first-child {
-  padding: 2rem 4.5rem;
-  column-gap: 4rem;
+ .grid_shop_now {
   display: grid;
-  grid-template-columns:  auto  auto;
-  justify-content: space-around;
-  row-gap: 2rem;
-  align-items: center;
-}
-.shop-now article:first-child div,
-.grid-invest {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  grid-template-columns: auto auto;
   justify-content: space-between;
-}
+  background: #008b8b;
+  color: #ffff;
+  width: 100%;
+  padding: 2rem 4.5rem;
+ }
+ .grid_invest {
+  background: #12617a;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 50px;
+  color: #fff;
+ }
+ .invest-section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+ }
+ .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
 
-.shop-now article:last-child {
-  padding-right: 4.5rem;
+ }
+ .span {
+  margin-top: 2.3rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+
+button {
+  margin-top: 10px;
 }
-.grid-btn {
+.grid_btn {
   all: unset;
   grid-column: 1 / span 2;
   text-align: center;
@@ -76,66 +92,47 @@
   cursor: pointer;
   font-weight: 700;
   color: #008b8b;
-  margin: 0 auto;
+  margin: 10px auto;
   width: 60%;
 
 }
-article span {
-  font-weight: 300;
-}
-.grid-shop-now {
-  background: #008b8b;
-  width: 100%;
-  padding: 20px;
-  color: #ffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-.grid-invest {
-  background: #12617a;
-  padding: 50px;
-  color: #fff;
-  gap: 20px;
-}
-
-
-
 @media screen and (max-width: 720px) {
-  .shop-now {
+  .shop_now {
     grid-template-columns: 100%;
     gap: 2rem;
     justify-content: center;
   }
-  .shop-now article:first-child {
-    padding-left: 2rem;
-  }
-  .shop-now article:last-child {
-    padding-right: 2rem;
-  }
-  .shop-now article:first-child,
-  .grid-invest {
-    border-radius: 12px;
-  }
+  .grid_shop_now {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+ }
+ .h3 {
+   margin-top: 20px; 
+ }
+ 
 
   .grid-btn {
     grid-column: 1 / span 2;
     width: initial;
     text-align: center;
   }
-  .grid-invest {
+  .grid_invest {
     text-align: center;
   }
 }
 @media screen and (max-width: 520px) {
-  .shop-now article:first-child,
-  .grid-invest {
-    grid-template-columns: 100%;
+  .shop-now  {
+ 
+    gap: 2rem;
+    justify-content: center;
+
     text-align: center;
   }
   .grid-btn {
     grid-column: 1 / span 1;
   }
 }
+
 </style>

@@ -1,4 +1,5 @@
 <template>
+<h1>Customer Testimony</h1>
   <GSCarousel
     :items="items"
     item-gap="16"
@@ -70,6 +71,14 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #008b8b;
+}
 .slide {
   box-shadow: 0 6px 15px -3px rgb(0 0 0/0.3);
   padding: 25px;
@@ -93,5 +102,30 @@ export default {
    letter-spacing: 0em;
    text-align: left;
   margin-top: 30px;
+}
+@media screen and (max-width: 520px) {
+  .paragraph {
+ font-family: Roboto;
+ font-size: 10px;
+ font-weight: 400;
+ text-align: left;
+}
+.location {
+   font-family: Roboto;
+   font-size: 15px;
+   font-weight: 500;
+   text-align: left;
+  margin-top: 20px;
+}
+.slide {
+  box-shadow: 0 6px 15px -3px rgb(0 0 0/0.3);
+  padding: 20px;
+  border-radius: 5px;
+  height: 155px;
+  width: 150px;
+  background: white;
+  color: #000;
+
+}
 }
 </style>
