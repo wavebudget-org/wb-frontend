@@ -23,7 +23,7 @@ const individuals = reactive([
     img: "profile",
     title: "Easy To Use",
     paragraph:
-      "With the simple registration process and user friendly interface, WaveBidget is easy to use.",
+      "With the simple registration process and user friendly interface, WaveBudget is easy to use.",
   },
 ]);
 const businesses = reactive([
@@ -49,7 +49,7 @@ const businesses = reactive([
     img: "delivery",
     title: "Instant Payment",
     paragraph:
-      " With the simple registration process and user friendly interface, WaveBidget is easy to use.",
+      " With the simple registration process and user friendly interface, WaveBudget is easy to use.",
   },
 ]);
 </script>

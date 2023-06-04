@@ -115,7 +115,7 @@ h1 {
    font-size: 15px;
    font-weight: 500;
    text-align: left;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .slide {
   box-shadow: 0 6px 15px -3px rgb(0 0 0/0.3);
@@ -125,7 +125,7 @@ h1 {
   width: 150px;
   background: white;
   color: #000;
-  gap: 20px;
+  gap: 25px;
 
 }
 h1 {
