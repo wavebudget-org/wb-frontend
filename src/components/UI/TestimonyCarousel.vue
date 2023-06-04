@@ -101,7 +101,7 @@ h1 {
    /* line-height: 28px; */
    letter-spacing: 0em;
    text-align: left;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 @media screen and (max-width: 520px) {
   .paragraph {

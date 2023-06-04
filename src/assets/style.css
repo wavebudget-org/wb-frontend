@@ -28,8 +28,8 @@
 
 .calculator-form {
     background: #fff;
-    width: 500px;
-    height: 350px;
+    width: 400px;
+    height: 500px;
     text-align: center;
     padding: 20px;
 }
@@ -135,7 +135,7 @@
 
 .take-control {
     font-weight: 600;
-    font-size: 30px;
+    font-size: 50px;
     text-align: start;
     width: 60%;
     margin: 2rem auto 0 auto;

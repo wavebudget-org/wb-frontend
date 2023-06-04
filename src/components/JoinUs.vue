@@ -49,7 +49,7 @@ const businesses = reactive([
     img: "delivery",
     title: "Instant Payment",
     paragraph:
-      " With the simple registration process and user friendly interface, WaveBudget is easy to use.",
+      " WaveBudget’’s payment system ensures that businesses receive payment immediately, without having to wait for customers to pay off their purchases over time.",
   },
 ]);
 </script>

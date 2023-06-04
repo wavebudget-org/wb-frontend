@@ -1,7 +1,7 @@
 <template>
   <li>
     <p>
-      <span :style="{ color: show === true ? '#12617a' : '#008b8b' }">{{
+      <span v-on:click="toggleBtn" :style="{ color: show === true ? '#12617a' : '#008b8b' }">{{
         question
       }}</span
       ><button v-on:click="toggleBtn">{{ show === false ? "+" : "-" }}</button>
@@ -42,6 +42,7 @@ p {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
   button {
     all: unset;
     font-weight: 900;

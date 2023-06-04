@@ -134,5 +134,35 @@ button {
     grid-column: 1 / span 1;
   }
 }
+@media screen and (max-width: 1026px) {
+ .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+
+ }
+ .span {
+  margin-top: 3.5rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+}
+
+@media screen and (max-width: 1026px) { 
+   .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+
+ }
+ .span {
+  margin-top: 4.7rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+}
+
 
 </style>
