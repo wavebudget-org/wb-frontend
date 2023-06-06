@@ -2,7 +2,7 @@
 <section class="shop_now">
   <div class="grid_shop_now">
    <div class="shop_section">
-        <h3>Split Payment in 5 parts</h3>
+        <h3 class="h3">Split Payment in 5 parts</h3>
         <p>
           Spread payment on items to meet other needs that matters, pay back in
           installments at zero interest rate
@@ -50,6 +50,7 @@
   width: 100%;
   padding: 2rem 4.5rem;
  }
+ 
  .grid_invest {
   background: #12617a;
   display: flex;
@@ -67,14 +68,14 @@
  .shop_section {
 display: flex;
 flex-direction: column;
-align-items: center;
-gap: 3rem;
+padding: 10px;
+gap: 3.5rem;
 
  }
  .span {
   margin-top: 2.3rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
 
 button {
@@ -145,7 +146,7 @@ gap: 3rem;
  .span {
   margin-top: 3.5rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
 }
 
@@ -160,7 +161,7 @@ gap: 3rem;
  .span {
   margin-top: 4.6rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
 }
 @media screen and (max-width: 935px) { 
@@ -188,7 +189,7 @@ gap: 3rem;
  .span {
   margin-top: 3.5rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
  
 }
@@ -217,7 +218,7 @@ gap: 3rem;
  .span {
   margin-top: 4.6rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
 }
 @media screen and (max-width: 796px) { 
@@ -231,7 +232,7 @@ gap: 3rem;
  .span {
   margin-top: 3.4rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
 }
 @media screen and (max-width: 799px) { 
@@ -245,7 +246,7 @@ gap: 3rem;
  .span {
   margin-top: 3.3rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
 }
 @media screen and (max-width: 800px) { 
@@ -259,7 +260,7 @@ gap: 3rem;
  .span {
   margin-top: 3.4rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
 }
 @media screen and (max-width: 803px) { 
@@ -273,7 +274,7 @@ gap: 3rem;
  .span {
   margin-top: 3.6rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
 }
 @media screen and (max-width: 811px) { 
@@ -287,7 +288,7 @@ gap: 3rem;
  .span {
   margin-top: 3.4rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
 }
 @media screen and (max-width: 813px) { 
@@ -301,7 +302,7 @@ gap: 3rem;
  .span {
   margin-top: 3.4rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
 }
 
