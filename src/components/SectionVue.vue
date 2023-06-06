@@ -175,7 +175,7 @@ gap: 3rem;
  .span {
   margin-top: 2.2rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
 }
 @media screen and (max-width: 790px) { 
@@ -204,7 +204,7 @@ gap: 3rem;
  .span {
   margin-top: 3.4rem;
    font-weight: 300;
-   padding-left: 15px;
+   padding-left: 10px;
  }
 }
 @media screen and (max-width: 775px) { 
