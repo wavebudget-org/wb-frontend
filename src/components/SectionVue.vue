@@ -149,7 +149,7 @@ gap: 3rem;
  }
 }
 
-@media screen and (max-width: 1026px) { 
+@media screen and (max-width: 760px) { 
    .shop_section {
 display: flex;
 flex-direction: column;
@@ -158,7 +158,148 @@ gap: 3rem;
 
  }
  .span {
-  margin-top: 4.7rem;
+  margin-top: 4.6rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+}
+@media screen and (max-width: 935px) { 
+   .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+
+ }
+ .span {
+  margin-top: 2.2rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+}
+@media screen and (max-width: 790px) { 
+   .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+
+ }
+ .span {
+  margin-top: 3.5rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+ 
+}
+@media screen and (max-width: 795px) { 
+   .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+
+ }
+ .span {
+  margin-top: 3.4rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+}
+@media screen and (max-width: 775px) { 
+   .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+
+ }
+ .span {
+  margin-top: 4.6rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+}
+@media screen and (max-width: 796px) { 
+   .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+
+ }
+ .span {
+  margin-top: 3.4rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+}
+@media screen and (max-width: 799px) { 
+   .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+
+ }
+ .span {
+  margin-top: 3.3rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+}
+@media screen and (max-width: 800px) { 
+   .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+
+ }
+ .span {
+  margin-top: 3.4rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+}
+@media screen and (max-width: 803px) { 
+   .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+
+ }
+ .span {
+  margin-top: 3.6rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+}
+@media screen and (max-width: 811px) { 
+   .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+
+ }
+ .span {
+  margin-top: 3.4rem;
+   font-weight: 300;
+   padding-left: 15px;
+ }
+}
+@media screen and (max-width: 813px) { 
+   .shop_section {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+
+ }
+ .span {
+  margin-top: 3.4rem;
    font-weight: 300;
    padding-left: 15px;
  }
