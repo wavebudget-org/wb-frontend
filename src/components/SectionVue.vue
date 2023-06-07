@@ -23,7 +23,7 @@
       <button class="grid_btn">Shop</button>
   </div>
   <div class="grid_invest">
-    <h3>Micro investment</h3>
+    <h3>Micro investment.</h3>
     <div class="invest-section">
       <p class="grid-invest-p">Earn passive income as you use our services.</p>
       <span class="grid-invest-p">
