@@ -75,7 +75,6 @@ gap: 3rem;
  .span {
   margin-top: 2.3rem;
    font-weight: 300;
-   padding-left: 10px;
  }
 
 button {
@@ -144,7 +143,7 @@ gap: 3rem;
  }
  .span {
    font-weight: 300;
-   padding-left: 15px;
+   /* padding-left: 15px; */
  }
 }
 
@@ -157,10 +156,8 @@ gap: 3rem;
  }
  .span {
    font-weight: 300;
-   padding-left: 15px;
+   /* padding-left: 15px; */
  }
 }
-
-
 
 </style>
