@@ -73,7 +73,7 @@ gap: 3rem;
 
  }
  .span {
-  margin-top: 2.3rem;
+  margin-top: 2.2rem;
    font-weight: 300;
  }
 
