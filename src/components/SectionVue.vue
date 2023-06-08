@@ -143,7 +143,6 @@ gap: 3rem;
  }
  .span {
    font-weight: 300;
-   /* padding-left: 15px; */
  }
 }
 
@@ -156,7 +155,8 @@ gap: 3rem;
  }
  .span {
    font-weight: 300;
-   /* padding-left: 15px; */
+  margin-top: -1rem;
+   font-weight: 300;
  }
 }
 
