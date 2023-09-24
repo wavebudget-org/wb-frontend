@@ -15,7 +15,7 @@
           WaveBudget app <br />
           coming soon.
         </h1>
-        <Button btn_1="Join the waitlist" btn_2="I have a question" />
+        <Button class="btn" btn_1="Join the waitlist" btn_2="I have a question" />
       </div>
       <img class="phone-image" src="../assets/images/phone-app.png" alt="" />
     </section>
@@ -57,3 +57,7 @@ export default {
   },
 };
 </script>
+<style scoped>
+
+</style>
+
