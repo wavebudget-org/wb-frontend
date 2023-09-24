@@ -12,6 +12,9 @@ export default {
     toggleMobile() {
       this.mobileView = !this.mobileView;
     },
+    ScrolltoView () {
+      alert("scroll")
+    }
   },
 };
 </script>
@@ -19,8 +22,8 @@ export default {
   <header class="top-header">
     <div>
       <div class="logo">
-        <img src="../assets/images/wave-logo.png" alt="" />
-        <span class="logo-span">WAVE <br />BUDGET</span>
+        <img src="../assets/images/wave_logo_.svg" alt="" />
+        <!-- <span class="logo-span">WAVE <br />BUDGET</span> -->
       </div>
     </div>
 
@@ -31,7 +34,7 @@ export default {
         <router-link class="links" to="/">Invest</router-link>
       </ul>
 
-      <button class="join-btn">Join waitlist</button>
+      <button @click="ScrolltoView" class="join-btn">Join waitlist</button>
     </nav>
     <div class="drop-down">
       <img
@@ -70,20 +73,13 @@ header {
 .logo {
   display: flex;
   position: relative;
-  width: 160px;
-  left: -50px;
+  width: 150px;
+  /* left: -10px; */
 }
-
-.logo-span {
-  display: flex;
-  position: absolute;
-  top: 10%;
-  right: -20px;
-  margin-top: 15px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #12617a;
+.logo img {
+  width: 100%;
 }
+/*  */
 .flex {
   display: flex;
   justify-content: space-between;

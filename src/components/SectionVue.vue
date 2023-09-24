@@ -20,7 +20,7 @@
           now.
         </span>
       </div>
-      <button class="grid_btn">Shop</button>
+      <button class="grid_btn"> <a href="https://www.wavebudget.com">Shop Now</a> </button>
   </div>
   <div class="grid_invest">
     <h3>Micro investment.</h3>
@@ -80,7 +80,7 @@ gap: 3rem;
 button {
   margin-top: 10px;
 }
-.grid_btn {
+.grid_btn  {
   all: unset;
   grid-column: 1 / span 2;
   text-align: center;
@@ -94,6 +94,11 @@ button {
   color: #008b8b;
   margin: 10px auto;
   width: 60%;
+
+}
+a {
+  color:  #008b8b ;
+   text-decoration: none;
 
 }
 @media screen and (max-width: 720px) {

@@ -8,7 +8,7 @@ export default {
 </script>
 <template>
   <div class="body-btn">
-    <button>{{ btn_1 }}</button>
+    <button> <a href="https://wavebudget.com/signup">{{ btn_1 }}</a> </button>
     <button >
       <a href="https://wa.me/2348137960202?text=hello,%20"
         >{{ btn_2 }} <img src="../../assets/images/message.png" alt="message"

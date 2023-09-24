@@ -1,15 +1,34 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <!--eslint-disable-next-line vue/multi-word-component-names-->
 <!-- eslint-disable vue/valid-template-root -->
+<script>
+export default {
+  Data () {
+    return {
+    item: "",
+    price: "",
+    payment: ""
+    }
+  },
+  methods : {
+    generate() {
+     alert("generate")
+    }
+    }
+  }
+
+</script>
+
 <template>
   <article class="demo-section">
     <h1 class="demo-h1">TRY A DEMO</h1>
     <h3 class="demo-p">BNPL Calculator</h3>
     <section class="bnpl_table">
-      <form>
+      <form @submit.prevent="generate">
         <div class="form-control">
           <label for="monthly_income">What is your monthly income</label>
           <input
+          v-model="income"
             type="text"
             placeholder="This information is important to get your credit limit"
           />
@@ -18,16 +37,16 @@
           <label for="what_you_want_to_buy"
             >What item do you want to buy?</label
           >
-          <input type="text" />
+          <input type="text"  v-model="item"/>
         </div>
         <div class="form-control">
           <label for="price_range">What is the item price range?</label>
-          <input type="text" />
+          <input type="text" v-model="price" />
         </div>
 
         <div class="form-control">
           <label for="select_payment">Select a payment term</label>
-          <input type="text" />
+          <input type="text" v-model="payment" />
         </div>
         <div class="form-btn">
           <button class="form-button">Generate</button>
