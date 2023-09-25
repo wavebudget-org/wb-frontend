@@ -40,7 +40,7 @@ export default {
   cursor: pointer;
 }
 
-.body-btn button:first-child a {
+.body-btn button:first-child  {
   background: #008b8b !important;
   color: #f8f8f8 !important;
   font-weight: 600 !important;
