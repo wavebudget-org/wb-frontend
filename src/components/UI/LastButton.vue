@@ -9,7 +9,7 @@ export default {
 <template>
   <div class="body-btn">
     <button>
-      <a href="#">{{ btn_3 }}</a>
+      <a href="#waitList">{{ btn_3 }}</a>
        </button>
     <button>
       <a href="https://wa.me/2348137960202?text=hello,%20"

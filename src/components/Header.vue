@@ -34,7 +34,7 @@ export default {
         <router-link class="links" to="/">Invest</router-link>
       </ul>
 
-      <button @click="ScrolltoWaitList" class="join-btn">Join waitlist</button>
+      <button class="join-btn"><a href="#waitList">Join WaitList</a></button>
     </nav>
     <div class="drop-down">
       <img
@@ -103,6 +103,10 @@ header {
   font-size: 1rem;
   border: none;
   cursor: pointer;
+}
+.flex button a {
+  text-decoration: none;
+  color: white;
 }
 .flex a {
   all: unset;

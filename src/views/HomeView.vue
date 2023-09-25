@@ -20,7 +20,7 @@
       </div>
       <img class="phone-image" src="../assets/images/phone-app.png" alt="" />
     </section>
-    <WaitList />
+    <WaitList/>
     <FAQ />
     <Footer />
   </main>

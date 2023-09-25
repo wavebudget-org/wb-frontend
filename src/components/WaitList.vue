@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="bnpl_table">
+    <div id="waitList" class="bnpl_table">
       <h3 class="waitlist-h3">Join Waitlist</h3>
       <form @submit.prevent="Submit">
         <div class="form-control">
