@@ -3,17 +3,17 @@
 <!-- eslint-disable vue/valid-template-root -->
 <script>
 export default {
-  props: ["btn_1", "btn_2"]
+  props: ["btn_3", "btn_4"]
 };
 </script>
 <template>
   <div class="body-btn">
     <button>
-      <a href="https://www.wavebudget.com/signup">{{ btn_1 }}</a>
+      <a href="#">{{ btn_3 }}</a>
        </button>
     <button>
       <a href="https://wa.me/2348137960202?text=hello,%20"
-        >{{ btn_2 }} <img src="../../assets/images/message.png" alt="message"
+        >{{ btn_4 }} <img src="../../assets/images/message.png" alt="message"
       /></a>
     </button>
     

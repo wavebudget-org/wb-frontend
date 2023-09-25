@@ -6,8 +6,9 @@
     <Demo />
     <how-it-works></how-it-works>
     <JoinUs />
+   
     <!-- <CarouselPath /> -->
-     <TestimonyCarousel />
+     <TestimonyCarousel /> 
     <!-- <Testimonies /> -->
     <section class="bnpl_table">
       <div class="coming_soon">
@@ -15,7 +16,7 @@
           WaveBudget app <br />
           coming soon.
         </h1>
-        <Button class="btn" btn_1="Join the waitlist" btn_2="I have a question" />
+        <LastButton btn_3="Join the waitlist" btn_4="I have a question" />
       </div>
       <img class="phone-image" src="../assets/images/phone-app.png" alt="" />
     </section>
@@ -29,11 +30,11 @@
 // @ is an alias to /src
 import Hero from "../components/Hero.vue";
 import Button from "../components/UI/Button.vue";
+import LastButton from "../components/UI/LastButton.vue";
 import SectionVue from "../components/SectionVue.vue";
 import Demo from "../components/Demo.vue";
 import HowItWorks from "../components/HowItWorks.vue";
 import JoinUs from "../components/JoinUs.vue";
-// import Testimonies from "../components/Testimonies.vue";
 import WaitList from "../components/WaitList.vue";
 import Footer from "../components/Footer.vue";
 import FAQ from "@/components/FAQ";
@@ -54,6 +55,7 @@ export default {
     FAQ,
     // CarouselPath,
     TestimonyCarousel,
+    LastButton
   },
 };
 </script>
