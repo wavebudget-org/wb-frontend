@@ -2,7 +2,7 @@
   <section>
     <div class="bnpl_table">
       <h3 class="waitlist-h3">Join Waitlist</h3>
-      <form @submit="Submit">
+      <form @submit.prevent="Submit">
         <div class="form-control">
           <label>Name</label>
           <input type="text" placeholder="Enter your name" />
