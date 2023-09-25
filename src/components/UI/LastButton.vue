@@ -40,7 +40,7 @@ export default {
   cursor: pointer;
 }
 
-.body-btn button:first-child a {
+.body-btn button:first-child  {
   background: #008b8b !important;
   color: #f8f8f8 !important;
   font-weight: 600 !important;
@@ -86,6 +86,7 @@ export default {
     padding-left: 2rem;
   }
 }
+
 @media screen and (max-width: 520px) {
   .body-btn {
     padding-left: 1rem;

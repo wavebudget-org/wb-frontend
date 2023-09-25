@@ -12,8 +12,8 @@ export default {
     toggleMobile() {
       this.mobileView = !this.mobileView;
     },
-    ScrolltoView () {
-      alert("scroll")
+    ScrolltoWaitList () {
+      
     }
   },
 };
@@ -34,7 +34,7 @@ export default {
         <router-link class="links" to="/">Invest</router-link>
       </ul>
 
-      <button @click="ScrolltoView" class="join-btn">Join waitlist</button>
+      <button @click="ScrolltoWaitList" class="join-btn">Join waitlist</button>
     </nav>
     <div class="drop-down">
       <img
