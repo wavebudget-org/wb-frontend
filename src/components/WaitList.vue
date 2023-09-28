@@ -11,6 +11,10 @@
           <label>Email</label>
           <input type="email" placeholder="Enter your email" />
         </div>
+         <div class="form-control">
+          <label>Phone Number</label>
+          <input type="number" placeholder="Enter your Phone Number" />
+        </div>
         <span class="form-btn">
           <button class="form-button submit">Submit</button>
         </span>
