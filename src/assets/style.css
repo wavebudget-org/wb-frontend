@@ -1,257 +1,258 @@
 .h1 {
-    font-size: 4.0rem;
-    color: #008b8b;
-    margin-bottom: 4rem;
-    padding: 10px;
+  font-size: 4rem;
+  color: #008b8b;
+  margin-bottom: 4rem;
+  padding: 10px;
 }
 
 .bnpl-calculator {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 .bnpl-btn {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .btn-generate {
-    padding: 10px 40px;
-    color: black;
-    border-radius: 8px;
-    cursor: pointer;
-    background: white;
+  padding: 10px 40px;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
 }
 
 .calculator-form {
-    background: #fff;
-    width: 400px;
-    height: 500px;
-    text-align: center;
-    padding: 20px;
+  background: #fff;
+  width: 400px;
+  height: 500px;
+  text-align: center;
+  padding: 20px;
 }
 
 .bnpl_table {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    padding: 0.5rem 4.5rem;
-    width: 100%;
-    place-content: center;
-    margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  padding: 0.5rem 4.5rem;
+  width: 100%;
+  place-content: center;
+  margin-top: 1rem;
 }
 
 .waitlist-h3 {
-    grid-column: 1 / span 2;
-    text-align: center;
-    color: black;
-    width: 60%;
-    margin-bottom: 1rem;
+  grid-column: 1 / span 2;
+  text-align: center;
+  color: black;
+  width: 60%;
+  margin-bottom: 1rem;
 }
 
 .bnpl_table form {
-    background-color: #fff;
-    border-radius: 6px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    width: 100%;
-    margin: auto 0;
-    padding: 2rem;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 100%;
+  margin: auto 0;
+  padding: 2rem;
 }
 
 .form-control {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
-.bnpl_table div input {
-    border-radius: 10px;
-    width: 100%;
-    padding: 0.5rem 0.6rem;
-    margin-top: 0.5rem;
-    border: 0.1rem solid #12617a;
+.bnpl_table div input:not([type="radio"]),
+select {
+  border-radius: 10px;
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  margin-top: 0.5rem;
+  border: 0.1rem solid #12617a;
 }
 
 .bnpl_table label {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .phone-image {
-    width: 100%;
-    height: 100%;
-    margin: auto 0;
+  width: 100%;
+  height: 100%;
+  margin: auto 0;
 }
 
 .works {
-    color: #008b8b;
-    text-align: center;
-    font-weight: 600;
-    margin-top: 3rem;
+  color: #008b8b;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 3rem;
 }
 
 .form-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 30px;
 }
 
 .form-btn {
-    display: flex;
-    text-align: center;
-    margin-top: 10px;
-    justify-content: center;
+  display: flex;
+  text-align: center;
+  margin-top: 10px;
+  justify-content: center;
 }
 
 .submit {
-    margin-top: 2rem !important;
+  margin-top: 2rem !important;
 }
 
 .form-button {
-    all: unset;
-    cursor: pointer;
-    padding: 10px 40px;
-    color: black;
-    border-radius: 8px;
-    cursor: pointer;
-    background: white;
-    font-weight: bold;
-    border: 2px solid #12617a;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
-    width: 50%;
+  all: unset;
+  cursor: pointer;
+  padding: 10px 40px;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
+  font-weight: bold;
+  border: 2px solid #12617a;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  width: 50%;
 }
 
 .coming_soon {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .coming_soon .body-btn {
-    padding-left: 0 !important;
+  padding-left: 0 !important;
 }
 
 .take-control {
-    font-weight: 600;
-    font-size: 50px;
-    text-align: start;
-    width: 60%;
-    margin: 2rem auto 0 auto;
-    color: #12617a;
+  font-weight: 600;
+  font-size: 50px;
+  text-align: start;
+  width: 60%;
+  margin: 2rem auto 0 auto;
+  color: #12617a;
 }
 
 .FAQ {
-    text-align: center;
-    font-size: 30px;
-    color: #008b8b;
-    margin: 3rem 0;
+  text-align: center;
+  font-size: 30px;
+  color: #008b8b;
+  margin: 3rem 0;
 }
 
 @media (min-width: 240px) and (max-width: 720px) {
-    .header-navigation {
-        display: none;
-    }
-    .join-btn {
-        display: none;
-    }
-    .drop-down {
-        display: block;
-    }
-    .h1 {
-        text-align: center;
-           margin: 2rem;
-        font-size: 3rem;
-    }
-    .message-logo {
-        position: relative;
-        padding: 15px;
-    }
-    .message-logo img {
-        position: absolute;
-        width: 20px;
-        top: 20px;
-        left: -45px;
-        padding: 5px;
-    }
-    .shop-now {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        row-gap: 1.5rem;
-        padding: 1rem;
-    }
-    .bnpl-calculator {
-        display: flex;
-        justify-content: center;
-    }
-    .phone-image {
-        display: none;
-    }
-    .calculator-form {
-        background: #fff;
-        width: 90%;
-        height: 350px;
-        text-align: center;
-        margin-bottom: -20px;
-    }
-    .first_div {
-        width: 100%;
-    }
-    .flex-part {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        background: #12617a;
-        padding: 10px;
-    }
-    .flex-part-1 {
-        background: #008b8b;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 10px;
-    }
-    .form-div:last-child {
-        margin-top: 1rem !important;
-    }
-    .bnpl_table input {
-        text-align: start !important;
-    }
-    .form-div button {
-        margin-top: 2rem;
-    }
-    .waitlist-h3 {
-        margin: 10px;
-        text-align: center;
-        width: 100%;
-        margin: 1rem auto;
-    }
-    .take-control {
-        font-weight: 600;
-        text-align: center;
-        grid-column: 1 / span 2;
-    }
-    .message-logo-2 {
-        position: relative;
-        padding: 15px;
-    }
-    .message-logo-2 img {
-        position: absolute;
-        width: 20px;
-        top: 30px;
-        left: -70px;
-        padding: 5px;
-    }
-    .l-section {
-        display: grid;
-        justify-content: center;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
-    .bnpl_table {
-        grid-template-columns: 100%;
-        padding: 0.5rem 2rem !important;
-    }
+  .header-navigation {
+    display: none;
+  }
+  .join-btn {
+    display: none;
+  }
+  .drop-down {
+    display: block;
+  }
+  .h1 {
+    text-align: center;
+    margin: 2rem;
+    font-size: 3rem;
+  }
+  .message-logo {
+    position: relative;
+    padding: 15px;
+  }
+  .message-logo img {
+    position: absolute;
+    width: 20px;
+    top: 20px;
+    left: -45px;
+    padding: 5px;
+  }
+  .shop-now {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    padding: 1rem;
+  }
+  .bnpl-calculator {
+    display: flex;
+    justify-content: center;
+  }
+  .phone-image {
+    display: none;
+  }
+  .calculator-form {
+    background: #fff;
+    width: 90%;
+    height: 350px;
+    text-align: center;
+    margin-bottom: -20px;
+  }
+  .first_div {
+    width: 100%;
+  }
+  .flex-part {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #12617a;
+    padding: 10px;
+  }
+  .flex-part-1 {
+    background: #008b8b;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .form-div:last-child {
+    margin-top: 1rem !important;
+  }
+  .bnpl_table input {
+    text-align: start !important;
+  }
+  .form-div button {
+    margin-top: 2rem;
+  }
+  .waitlist-h3 {
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+  }
+  .take-control {
+    font-weight: 600;
+    text-align: center;
+    grid-column: 1 / span 2;
+  }
+  .message-logo-2 {
+    position: relative;
+    padding: 15px;
+  }
+  .message-logo-2 img {
+    position: absolute;
+    width: 20px;
+    top: 30px;
+    left: -70px;
+    padding: 5px;
+  }
+  .l-section {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .bnpl_table {
+    grid-template-columns: 100%;
+    padding: 0.5rem 2rem !important;
+  }
 }
