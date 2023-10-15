@@ -209,6 +209,10 @@ input:invalid {
     text-align: center;
   }
 
+  .form-control * {
+    text-align: start !important;
+  }
+
   .demo-p {
     margin-left: 0;
   }
