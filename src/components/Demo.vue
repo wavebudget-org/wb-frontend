@@ -6,34 +6,38 @@ import { ref, computed } from 'vue';
 import { moneyInNaira } from '../helpers/money-helper';
 
 import Modal from './UI/Modal'
+const defaultInstallmentPrice = (itemPrice) => (itemPrice * 111 / 100);
 const amountToPay = ref(0);
 const itemName = ref('')
 const modeOfPayment = ref('');
 const onBefore1Month = ref();
 const onBefore2Months = ref();
 const onAfter2Months = ref();
-const downPayment = ref();
+const downPayment = ref(defaultInstallmentPrice(amountToPay.value) * 40 / 100);
 const show = ref(false);
-let totalValue;
+const errorMessage = ref('')
+let totalValue = ref();
 // const formIsValid = ref(false)
 const amountInNaira = computed(() => {
   return amountToPay.value.toLocaleString("en-NG", { style: "currency", currency: "NGN" })
 })
 
-const err = computed(() => {
-  if (amountToPay.value <= 30000) {
-    return 'Too small'
-  } else {
-    return amountInNaira.value
-  }
-})
 const showHandler = () => show.value = !show.value
-const defaultInstallmentPrice = (itemPrice) => (itemPrice * 111 / 100)
+
 const generate = () => {
+  //condition
+  if (amountToPay.value === 0 || modeOfPayment.value === "" || itemName.value === "") {
+    errorMessage.value = "Check your input again and filled as required!"
+    return
+  }
+
   //Default Installment Price
   const dip = defaultInstallmentPrice(amountToPay.value);
   if (modeOfPayment.value === "zero-pay") {
-
+    if (amountToPay.value > 70000) {
+      errorMessage.value = `The maximum price of zero-pay item is ${moneyInNaira(70000)}`
+      return;
+    }
     //When paying before 30days 
     onBefore1Month.value = moneyInNaira(defaultInstallmentPrice(amountToPay.value))
     // totalValue = amountToPay.value
@@ -45,28 +49,41 @@ const generate = () => {
     onAfter2Months.value = dip / 3
     //When paying for more than two months
     const installment = dip / 3;
-    totalValue = installment
+    totalValue.value = { amountInNaira, modeOfPayment, itemName, onBefore1Month, onAfter2Months, onBefore2Months, installment }
 
   } else if (modeOfPayment.value === "flexi-pay") {
+    if (downPayment.value < defaultInstallmentPrice((amountToPay.value) * 40 / 100)) {
+      errorMessage.value = `The default downpayment must never be less than ${defaultInstallmentPrice((amountToPay.value) * 40 / 100)}`
+      return
+    } else if (downPayment.value > amountToPay.value) {
+      errorMessage.value = "Your downpayment has exceeded the total amount"
+      return;
+    }
+    //Debit
     const debit = defaultInstallmentPrice(amountToPay.value) - downPayment.value
-    console.log(debit)
+
+    //Discount
     const discount = (dip - amountToPay.value) / 2
-    console.log(discount)
+
     onAfter2Months.value = debit / 4;
     onBefore2Months.value = debit - discount
-    onBefore1Month.value = debit
+    onBefore1Month.value = moneyInNaira(debit);
+
+    totalValue.value = { amountInNaira, modeOfPayment, itemName, onBefore1Month, onBefore2Months, onAfter2Months, downPayment: downPayment }
   }
-  console.log(moneyInNaira(totalValue))
-  const results = { modeOfPayment: modeOfPayment.value, onBefore1Month: moneyInNaira(onBefore1Month.value), onBefore2Months: moneyInNaira(onBefore2Months.value), onAfter2Months: moneyInNaira(onAfter2Months.value) }
-  console.log(itemName.value, amountToPay.value, modeOfPayment.value);
-  console.log(results);
   showHandler()
 }
 
 </script>
 
 <template>
-  <Modal :show="show" @toggle="showHandler" />
+  <div v-if="show">
+    <Modal :show="show" @toggle="showHandler" :item-name="totalValue.itemName" :instalment-mode="totalValue.modeOfPayment"
+      :item-price="totalValue.amountInNaira" :down-payment="totalValue.downPayment" :one-month="totalValue.onBefore1Month"
+      :two-month="totalValue.onBefore2Months" :other-month="totalValue.onAfter2Months">
+    </Modal>
+  </div>
+
   <article class="demo-section">
     <h1 class="demo-h1">TRY A DEMO</h1>
     <h3 class="demo-p">BNPL Calculator</h3>
@@ -74,11 +91,12 @@ const generate = () => {
       <form @submit.prevent="generate">
         <div class="form-control">
           <label for="item-name">Input Item Name</label>
-          <input type="text" placeholder="Enter item name" v-model="itemName" id="item-name" name="item-price" />
+          <input type="text" placeholder="Enter item name" v-model="itemName" id="item-name" name="item-name" required />
         </div>
         <div class="form-control">
-          <label for="item-price">Input item price amount (#) {{ err }}</label>
-          <input type="number" placeholder="Enter item price" v-model="amountToPay" id="item-price" name="item-price" />
+          <label for="item-price">Input item price amount (#)</label>
+          <input type="number" placeholder="Enter item price" v-model="amountToPay" id="item-price" name="item-price"
+            :max="modeOfPayment === 'zero-pay' ? 70000 : 10000000000" />
         </div>
         <div class="form-control">
           <h3>Pick a payment plan </h3>
@@ -96,14 +114,16 @@ const generate = () => {
 
           </div>
         </div>
-        <div class="form-control" v-show="modeOfPayment === 'flexi-pay'">
+        <div class="form-control" v-if="modeOfPayment === 'flexi-pay'">
           <label for="item-name">Input your down payment that is greater than {{
             moneyInNaira((defaultInstallmentPrice(amountToPay) * 40 / 100)) }}
           </label>
-          <input type="number" placeholder="Enter item name" v-model="downPayment"
-            :min="(defaultInstallmentPrice(amountToPay) * 40 / 100)" :max="amountToPay" id="item-name"
-            name="item-price" />
+          <input type="number"
+            :placeholder="`Enter downpayment less or equals to ${(defaultInstallmentPrice(amountToPay) * 40 / 100)}`"
+            v-model="downPayment" :min="(defaultInstallmentPrice(amountToPay) * 40 / 100)" :max="amountToPay"
+            id="downpaymentt" name="downpayment" />
         </div>
+        <p class="error-message">{{ errorMessage }}</p>
         <div class="form-btn">
           <button class="form-button">Generate</button>
         </div>
@@ -162,6 +182,11 @@ const generate = () => {
   cursor: pointer;
 }
 
+input:invalid {
+  color: red;
+  border-radius: 12px solid red !important;
+}
+
 .radio-div input:checked {
   color: #008b8b;
   background-color: #008b8b;
@@ -170,6 +195,13 @@ const generate = () => {
 .radio-div input:checked+label {
   color: #008b8b;
 
+}
+
+.error-message {
+  color: red;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-align: center;
 }
 
 @media screen and (max-width: 720px) {
