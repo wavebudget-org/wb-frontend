@@ -9,13 +9,13 @@ const Word = "Be the first to know when our site is live"
     <img src="../assets/images/wave_logo_.svg" alt="" />
    </div>
    <div class="coming-top">
-    <h1>{{coming}}</h1>
+    <h1 class="h1">{{coming}}</h1>
     <h4>{{Word}}</h4>
    </div>
 </div>
   <div class="card-body">
     <div class="card-1"> 
-      <h2>In-store shopping</h2> 
+      <h1>In-store shopping</h1> 
      <h3>Buy items on credit from physical 
       stores arround you.</h3>
        <div class="p-btn">
@@ -23,7 +23,7 @@ const Word = "Be the first to know when our site is live"
     </div>
     </div>
     <div class="card-2">  
-     <p>Product and services.</p>
+     <h1>Product and services.</h1>
       <p>Explore our landing page to know more about us</p>
        <div class="p-btn">
       <router-link to="/homePage" class="btn-2">Explore</router-link>
@@ -131,16 +131,25 @@ h1 {
   font-size: 47px;
   text-align: center;
   font-weight: 700;
-  color:#008b8b;
+  /* color:#008b8b; */
+  color: #ffff;
   padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.h1 {
+  font-size: 47px;
+  text-align: center;
+  font-weight: 700;
+  color:#008b8b;
+  /* padding: 1rem; */
   font-family: Arial, Helvetica, sans-serif;
 }
 h4 {
     font-size: 25px;
-    text-align: center;
+   text-align: center;
   font-weight: 700;
   color:#008b8b;
-  padding: 1rem;
+  /* padding: 1rem; */
   font-family: Arial, Helvetica, sans-serif;
 }
 h2,h3 {
