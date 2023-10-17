@@ -1,13 +1,13 @@
 <template>
-  <Header />
+  <!-- <ComingPage/> -->
   <router-view />
 </template>
 <script>
-import Header from "./components/Header.vue";
+// import ComingPage from './components/ComingPage'
 
 export default {
   components: {
-    Header,
+      // ComingPage,
   },
 };
 </script>
