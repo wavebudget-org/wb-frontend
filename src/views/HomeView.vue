@@ -128,7 +128,7 @@ p  {
 
 }
 h1 {
-  font-size: 47px;
+  font-size: 3rem;
   text-align: center;
   font-weight: 700;
   /* color:#008b8b; */
@@ -159,6 +159,12 @@ h2,h3 {
   text-align: center;
   padding: 1rem;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width:768px) {
+    h1 {
+     font-size: 1.7rem;
+    }
 }
 
 </style>
