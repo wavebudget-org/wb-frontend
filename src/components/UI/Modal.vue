@@ -85,7 +85,7 @@ defineEmits(['toggle'])
 
 .overlay {
     position: fixed;
-    z-index: 1000000000000000000000000000000;
+    z-index: 100000000000;
     background-color: #fff;
     width: 500px;
     height: 400px;
