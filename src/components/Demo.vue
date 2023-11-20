@@ -2,74 +2,86 @@
 <!--eslint-disable-next-line vue/multi-word-component-names-->
 <!-- eslint-disable vue/valid-template-root -->
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, watchEffect } from 'vue';
 import { moneyInNaira } from '../helpers/money-helper';
 
 import Modal from './UI/Modal'
 const defaultInstallmentPrice = (itemPrice) => (itemPrice * 111 / 100);
-const amountToPay = ref(0);
-const itemName = ref('')
-const modeOfPayment = ref('');
+const amountToPay = ref({ amount: '', isValid: false });
+const itemName = ref({ name: '', isValid: false })
+const modeOfPayment = ref({ value: '', isValid: false });
 const onBefore1Month = ref();
 const onBefore2Months = ref();
 const onAfter2Months = ref();
-const downPayment = ref(defaultInstallmentPrice(amountToPay.value) * 40 / 100);
+const downPayment = ref({ amount: null, isValid: false });
 const show = ref(false);
 const errorMessage = ref('')
+
+watchEffect(() => {
+  downPayment.value.amount = (defaultInstallmentPrice(amountToPay.value.amount) * 40 / 100).toFixed(2)
+})
+const validateItemName = () => {
+  const pattern = /^[a-zA-Z]*$/;
+  if (!pattern.test(itemName.value.name)) {
+    itemName.value.isValid = true;
+    return
+  } else {
+    itemName.value.isValid = false
+  }
+}
 let totalValue = ref();
 // const formIsValid = ref(false)
 const amountInNaira = computed(() => {
-  return amountToPay.value.toLocaleString("en-NG", { style: "currency", currency: "NGN" })
+  return amountToPay.value.amount.toLocaleString("en-NG", { style: "currency", currency: "NGN" })
 })
 
 const showHandler = () => show.value = !show.value
+//Form conditions
 
 const generate = () => {
   //condition
-  if (amountToPay.value === 0 || modeOfPayment.value === "" || itemName.value === "") {
+  if (amountToPay.value.amount === 0 || modeOfPayment.value.value === "" || itemName.value.name === "") {
+    itemName.value.isValid = true
     errorMessage.value = "Check your input again and filled as required!"
     return
   }
 
   //Default Installment Price
-  const dip = defaultInstallmentPrice(amountToPay.value);
-  if (modeOfPayment.value === "zero-pay") {
-    if (amountToPay.value > 70000) {
+  const dip = defaultInstallmentPrice(amountToPay.value.amount);
+  if (modeOfPayment.value.value === "zero-pay") {
+    if (amountToPay.value.amount > 70000) {
       errorMessage.value = `The maximum price of zero-pay item is ${moneyInNaira(70000)}`
       return;
     }
     //When paying before 30days 
-    onBefore1Month.value = moneyInNaira(defaultInstallmentPrice(amountToPay.value))
+    onBefore1Month.value = moneyInNaira(amountToPay.value.amount)
     // totalValue = amountToPay.value
 
     //When paying for two months
-    onBefore2Months.value = (dip - ((dip - amountToPay.value) / 2)) / 2
+    onBefore2Months.value = (dip - ((dip - amountToPay.value.amount) / 2))
     // const twoMonth = (dip - ((dip - amountToPay.value) / 2)) / 2;
     // totalValue = twoMonth
     onAfter2Months.value = dip / 3
     //When paying for more than two months
     const installment = dip / 3;
-    totalValue.value = { amountInNaira, modeOfPayment, itemName, onBefore1Month, onAfter2Months, onBefore2Months, installment }
+    totalValue.value = { amountInNaira, modeOfPayment: modeOfPayment.value.value, itemName: itemName.value.name, onBefore1Month, onAfter2Months, onBefore2Months, installment }
 
-  } else if (modeOfPayment.value === "flexi-pay") {
-    if (downPayment.value < defaultInstallmentPrice((amountToPay.value) * 40 / 100)) {
-      errorMessage.value = `The default downpayment must never be less than ${defaultInstallmentPrice((amountToPay.value) * 40 / 100)}`
+  } else if (modeOfPayment.value.value === "flexi-pay") {
+    if (downPayment.value.amount < defaultInstallmentPrice((amountToPay.value.amount) * 40 / 100).toFixed(2)) {
+      errorMessage.value = `The default downpayment must never be less than ${defaultInstallmentPrice((amountToPay.value.amount) * 40 / 100).toFixed(2)}`
       return
-    } else if (downPayment.value > amountToPay.value) {
+    } else if (downPayment.value.amount > amountToPay.value.amount) {
       errorMessage.value = "Your downpayment has exceeded the total amount"
       return;
     }
     //Debit
-    const debit = defaultInstallmentPrice(amountToPay.value) - downPayment.value
-
+    const debit = defaultInstallmentPrice(amountToPay.value.amount) - downPayment.value.amount
     //Discount
-    const discount = (dip - amountToPay.value) / 2
-
+    const discount = (dip - amountToPay.value.amount) / 2
+    onBefore1Month.value = moneyInNaira(amountToPay.value.amount - downPayment.value.amount);
     onAfter2Months.value = debit / 4;
-    onBefore2Months.value = debit - discount
-    onBefore1Month.value = moneyInNaira(debit);
-
-    totalValue.value = { amountInNaira, modeOfPayment, itemName, onBefore1Month, onBefore2Months, onAfter2Months, downPayment: downPayment }
+    onBefore2Months.value = debit - discount;
+    totalValue.value = { amountInNaira, modeOfPayment: modeOfPayment.value.value, itemName: itemName.value.name, onBefore1Month, onBefore2Months, onAfter2Months, downPayment: downPayment.value.amount }
   }
   showHandler()
 }
@@ -91,42 +103,44 @@ const generate = () => {
       <form @submit.prevent="generate">
         <div class="form-control">
           <label for="item-name">Input Item Name</label>
-          <input type="text" placeholder="Enter item name" v-model="itemName" id="item-name" name="item-name" required />
+          <input type="text" placeholder="Enter item name" v-model="itemName.name" v-on:input="validateItemName"
+            id="item-name" name="item-name" required />
+          <p v-if="itemName.isValid" class="err-msg">This input must be not empty; it requires a text value</p>
         </div>
         <div class="form-control">
           <label for="item-price">Input item price amount (#)</label>
-          <input type="number" placeholder="Enter item price" v-model="amountToPay" id="item-price" name="item-price"
-            :max="modeOfPayment === 'zero-pay' ? 70000 : 10000000000" />
+          <input type="number" placeholder="Enter item price" v-model="amountToPay.amount" id="item-price"
+            name="item-price" :max="modeOfPayment.value === 'zero-pay' ? 70000 : 10000000000" />
         </div>
         <div class="form-control">
           <h3>Pick a payment plan </h3>
           <div class="div-radio">
             <div class="radio-div">
-              <input type="radio" name="mode-of-payment" id="zero-pay" value="zero-pay" v-model="modeOfPayment"><label
-                for="zero-pay">Zero
+              <input type="radio" name="mode-of-payment" id="zero-pay" value="zero-pay"
+                v-model="modeOfPayment.value"><label for="zero-pay">Zero
                 pay</label>
             </div>
             <div class="radio-div">
-              <input type="radio" name="mode-of-payment" id="flexi-pay" value="flexi-pay" v-model="modeOfPayment"><label
-                for="flexi-pay">Flexi
+              <input type="radio" name="mode-of-payment" id="flexi-pay" value="flexi-pay"
+                v-model="modeOfPayment.value"><label for="flexi-pay">Flexi
                 Pay</label>
             </div>
-
           </div>
         </div>
-        <div class="form-control" v-if="modeOfPayment === 'flexi-pay'">
+        <div class="form-control" v-if="modeOfPayment.value === 'flexi-pay'">
           <label for="item-name">Input your down payment that is greater than {{
-            moneyInNaira((defaultInstallmentPrice(amountToPay) * 40 / 100)) }}
+            moneyInNaira((defaultInstallmentPrice(amountToPay.amount) * 40 / 100)) }}
           </label>
           <input type="number"
-            :placeholder="`Enter downpayment less or equals to ${(defaultInstallmentPrice(amountToPay) * 40 / 100)}`"
-            v-model="downPayment" :min="(defaultInstallmentPrice(amountToPay) * 40 / 100)" :max="amountToPay"
-            id="downpaymentt" name="downpayment" />
+            :placeholder="`Enter downpayment less or equals to ${(defaultInstallmentPrice(amountToPay.amount) * 40 / 100)}`"
+            v-model="downPayment.amount" :min="(defaultInstallmentPrice(amountToPay.amount) * 40 / 100).toFixed(2)"
+            :max="amountToPay.amount" id="downpaymentt" name="downpayment" />
         </div>
         <p class="error-message">{{ errorMessage }}</p>
         <div class="form-btn">
           <button class="form-button">Generate</button>
         </div>
+
       </form>
       <img class="phone-image" src="../assets/images/phone.png" alt="phone" />
     </section>
@@ -197,11 +211,19 @@ input:invalid {
 
 }
 
-.error-message {
+.error-message,
+.err-msg {
   color: red;
   font-weight: 600;
   letter-spacing: 0.1rem;
   text-align: center;
+}
+
+.err-msg {
+  text-align: left;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-top: 0.1rem;
 }
 
 @media screen and (max-width: 720px) {
