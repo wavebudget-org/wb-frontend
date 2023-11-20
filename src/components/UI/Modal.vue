@@ -11,7 +11,7 @@ defineEmits(['toggle'])
 <template>
     <Teleport to="body">
         <div class="backdrop" v-if="show" @click="$emit('toggle')"></div>
-        <Transition name="modal">
+        <Transition name="modal">   
             <dialog class="overlay" open v-if="show">
                 <header>
                     <h3>WaveBuddget LLC</h3>
@@ -23,11 +23,11 @@ defineEmits(['toggle'])
                     <h5>Item Details</h5>
                     <ul>
                         <li>
-                            <div>Entered Item Name</div>
+                            <div>Item Name</div>
                             <div>{{ itemName }}</div>
                         </li>
                         <li>
-                            <div>Entered Item Price</div>
+                            <div>Item Price</div>
                             <div>{{ itemPrice }}</div>
                         </li>
                         <li>
@@ -35,7 +35,7 @@ defineEmits(['toggle'])
                             <div style="text-transform: capitalize;">{{ instalmentMode.replace('-', ' ') }}</div>
                         </li>
                         <li v-if="downPayment">
-                            <div>Entered Downpaynment</div>
+                            <div>Downpaynment</div>
                             <div>{{ moneyInNaira(downPayment) }}</div>
                         </li>
                     </ul>
@@ -53,7 +53,7 @@ defineEmits(['toggle'])
                             <div>{{ moneyInNaira(otherMonth) }}</div>
                         </li>
                     </ul>
-                    <h5>Discount on early payment</h5>
+                    <h5>Early payment Discount</h5>
                     <ul>
                         <li>
                             <div>On or before 2 month payment</div>
