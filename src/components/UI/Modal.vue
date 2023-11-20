@@ -11,7 +11,7 @@ defineEmits(['toggle'])
 <template>
     <Teleport to="body">
         <div class="backdrop" v-if="show" @click="$emit('toggle')"></div>
-        <Transition name="modal">   
+        <Transition name="modal">
             <dialog class="overlay" open v-if="show">
                 <header>
                     <h3>WaveBuddget LLC</h3>
