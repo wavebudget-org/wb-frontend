@@ -41,9 +41,13 @@ defineEmits(['toggle'])
                     </ul>
                     <h5>Instalment Details</h5>
                     <ul v-if="instalmentMode === 'zero-pay'">
-                        <li style="text-transform: capitalize;" v-for="month in ['first', 'second', 'third']" :key="month">
+                        <li style="text-transform: capitalize;" v-for="month in ['first', 'second']" :key="month">
                             <div>{{ month }} month payment </div>
                             <div>{{ moneyInNaira(otherMonth) }}</div>
+                        </li>
+                        <li>
+                            <div></div>
+                            <div style="font-weight: bold;  ">Total: {{ moneyInNaira(otherMonth * 2) }}</div>
                         </li>
                     </ul>
                     <ul v-else>
@@ -52,10 +56,15 @@ defineEmits(['toggle'])
                             <div>{{ month }} month payment </div>
                             <div>{{ moneyInNaira(otherMonth) }}</div>
                         </li>
+                        <li>
+                            <div></div>
+                            <div style="font-weight: bold; justify-self: self-end;">Total: {{ moneyInNaira(otherMonth * 4)
+                            }}</div>
+                        </li>
                     </ul>
                     <h5>Early payment Discount</h5>
                     <ul>
-                        <li>
+                        <li v-if="instalmentMode === 'flexi-pay'">
                             <div>On or before 2 month payment</div>
                             <div>{{ moneyInNaira(twoMonth) }}</div>
                         </li>
@@ -88,7 +97,7 @@ defineEmits(['toggle'])
     z-index: 100000000000;
     background-color: #fff;
     width: 500px;
-    height: 400px;
+    height: fit-content;
     left: 20%;
     top: 0;
     color: #000;
@@ -96,8 +105,9 @@ defineEmits(['toggle'])
     border: none;
     /* padding: 0 1.5rem; */
     width: 80%;
-    top: 20vh;
+    top: 15vh;
     left: 10%;
+    padding-bottom: 0.8rem;
 }
 
 /* #12617a */
@@ -170,5 +180,4 @@ defineEmits(['toggle'])
         left: calc(50% - 20rem);
         width: 40rem;
     }
-}
-</style>
+}</style>

@@ -6,7 +6,7 @@ import { ref, computed, watchEffect } from 'vue';
 import { moneyInNaira } from '../helpers/money-helper';
 
 import Modal from './UI/Modal'
-const defaultInstallmentPrice = (itemPrice) => (itemPrice * 111 / 100);
+const defaultInstallmentPrice = (itemPrice) => (itemPrice * 110 / 100);
 const amountToPay = ref({ amount: '', isValid: false });
 const itemName = ref({ name: '', isValid: false })
 const modeOfPayment = ref({ value: '', isValid: false });
@@ -23,6 +23,7 @@ watchEffect(() => {
 const validateItemName = () => {
   const pattern = /^[a-zA-Z]*$/;
   if (!pattern.test(itemName.value.name)) {
+    itemName.value.name = itemName.value.name.substring(0,itemName.value.name.length - 1)
     itemName.value.isValid = true;
     return
   } else {
@@ -54,16 +55,15 @@ const generate = () => {
       return;
     }
     //When paying before 30days 
-    onBefore1Month.value = moneyInNaira(amountToPay.value.amount)
-    // totalValue = amountToPay.value
+    onBefore1Month.value = moneyInNaira(dip - ((dip - amountToPay.value.amount) / 2))
+
 
     //When paying for two months
-    onBefore2Months.value = (dip - ((dip - amountToPay.value.amount) / 2))
-    // const twoMonth = (dip - ((dip - amountToPay.value) / 2)) / 2;
-    // totalValue = twoMonth
-    onAfter2Months.value = dip / 3
+    onAfter2Months.value = dip / 2
+
     //When paying for more than two months
-    const installment = dip / 3;
+    const installment = dip / 2;
+    console.log(installment);
     totalValue.value = { amountInNaira, modeOfPayment: modeOfPayment.value.value, itemName: itemName.value.name, onBefore1Month, onAfter2Months, onBefore2Months, installment }
 
   } else if (modeOfPayment.value.value === "flexi-pay") {
