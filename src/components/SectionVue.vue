@@ -20,7 +20,7 @@
           now.
         </span>
       </div>
-      <button class="grid_btn"> <a href="https://www.wavebudget.com">Shop Now</a> </button>
+      <button class="grid_btn"> <a href="http://wavemart.wavebudget.com">Shop Now</a> </button>
   </div>
   <div class="grid_invest">
     <h3>Micro investment.</h3>
